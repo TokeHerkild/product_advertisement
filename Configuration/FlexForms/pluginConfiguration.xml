@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEForms>
+					<sheetTitle>LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.name</sheetTitle>
+				</TCEForms>
+				<type>array</type>
+				<el>
+					<!-- Controller Actions Switcher -->
+					<switchableControllerActions>
+						<TCEforms>
+							<label>LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.plugin_dropdown</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.plugin_dropdown_list_action</numIndex>
+										<numIndex index="1">Products->list</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.plugin_dropdown_new_action</numIndex>
+										<numIndex index="1">Products->new;Products->edit;Products->create;Products->update</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.plugin_dropdown_search_action</numIndex>
+										<numIndex index="1">Products->search;Products->searchresult</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.plugin_dropdown_myproducts_action</numIndex>
+										<numIndex index="1">Products->userproducts;Products->delete;Products->hide;Products->showProduct</numIndex>
+									</numIndex>
+									<numIndex index="5">
+										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.plugin_dropdown_show_action</numIndex>
+										<numIndex index="1">Products->show;Products->inquiry;Products->sendMessage</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+
+					<!-- Sorting By Field -->
+					<settings.sortField>
+						<TCEforms>
+							<label>LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.sorting_field_label</label>
+							<displayCond>
+                                <OR>
+                                	<numIndex>FIELD:switchableControllerActions:=:Products->list</numIndex>
+                                	<OR>
+                                		<numIndex>FIELD:switchableControllerActions:=:Products->search;Products->searchresult</numIndex>
+                                		<OR>
+		                        			<numIndex>FIELD:switchableControllerActions:=:Products->userproducts;Products->delete;Products->hide;Products->showProduct</numIndex>
+		                        		</OR>
+                                	</OR>
+                                </OR>
+                            </displayCond>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.sorting_field_label.by_title</numIndex>
+										<numIndex index="1">name</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.sorting_field_label.by_place</numIndex>
+										<numIndex index="1">ownerplace</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.sorting_field_label.by_start_date</numIndex>
+										<numIndex index="1">fromdate</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.sorting_field_label.by_end_date</numIndex>
+										<numIndex index="1">todate</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.sortField>
+					<!-- Sorting By Field -->
+
+					<!-- Sorting Order -->
+					<settings.sortDirection>
+						<TCEforms>
+							<label>LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.sorting_order_field</label>
+							<displayCond>
+                                <OR>
+                                	<numIndex>FIELD:switchableControllerActions:=:Products->list</numIndex>
+                                	<OR>
+                                		<numIndex>FIELD:switchableControllerActions:=:Products->search;Products->searchresult</numIndex>
+                                		<OR>
+		                        			<numIndex>FIELD:switchableControllerActions:=:Products->userproducts;Products->delete;Products->hide;Products->showProduct</numIndex>
+		                        		</OR>
+                                	</OR>
+                                </OR>
+                            </displayCond>
+                            <config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.sorting_order_field.asc</numIndex>
+										<numIndex index="1">asc</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.sorting_order_field.desc</numIndex>
+										<numIndex index="1">desc</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</settings.sortDirection>
+					<!-- Sorting Order -->
+
+					<!-- Product Detail Page Id -->
+					<settings.detailPageId>
+						<TCEforms>
+							<label>LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.detail_page</label>
+							<displayCond>
+                                <OR>
+                                	<numIndex>FIELD:switchableControllerActions:=:Products->list</numIndex>
+                                	<OR>
+                                		<numIndex>FIELD:switchableControllerActions:=:Products->search;Products->searchresult</numIndex>
+                                	</OR>
+                                </OR>
+                            </displayCond>
+							<config>
+								<type>group</type>
+		                            <internal_type>db</internal_type>
+		                            <allowed>pages</allowed>
+		                            <size>1</size>
+		                            <maxitems>1</maxitems>
+		                            <minitems>0</minitems>
+		                            <show_thumbs>1</show_thumbs>
+		                            <wizards>
+		                                <suggest>
+		                                    <type>suggest</type>
+		                                </suggest>
+		                            </wizards>
+							</config>
+						</TCEforms>
+					</settings.detailPageId>
+					<!-- Product Detail Page Id -->
+
+					<!-- Product List Page Id -->
+					<settings.listPageId>
+						<TCEforms>
+							<label>LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.list_page</label>
+							<displayCond>
+								<OR>
+                                	<numIndex>FIELD:switchableControllerActions:=:Products->show;Products->inquiry;Products->sendMessage</numIndex>
+                                	<OR>
+                                		<numIndex>FIELD:switchableControllerActions:=:Products->new;Products->edit;Products->create;Products->update</numIndex>
+                                		<OR>
+                                			<numIndex>FIELD:switchableControllerActions:=:Products->userproducts;Products->delete;Products->hide;Products->showProduct</numIndex>
+                                		</OR>
+                                	</OR>
+                                </OR>
+                            </displayCond>
+							<config>
+								<type>group</type>
+	                                <internal_type>db</internal_type>
+	                                <allowed>pages</allowed>
+	                                <size>1</size>
+	                                <maxitems>1</maxitems>
+	                                <minitems>0</minitems>
+	                                <show_thumbs>1</show_thumbs>
+	                                <wizards>
+	                                    <suggest>
+	                                        <type>suggest</type>
+	                                    </suggest>
+	                                </wizards>
+							</config>
+						</TCEforms>
+					</settings.listPageId>
+					<!-- Product List Page Id -->
+
+
+					<!-- My Product List Page Id -->
+					<settings.myListPageId>
+						<TCEforms>
+							<label>LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.my_product_list_page</label>
+							<displayCond>
+                                <OR>
+                                	<numIndex>FIELD:switchableControllerActions:=:Products->new;Products->edit;Products->create;Products->update</numIndex>
+                                	<OR>
+                                		<numIndex>FIELD:switchableControllerActions:=:Products->userproducts;Products->delete;Products->hide;Products->showProduct</numIndex>
+                                	</OR>
+                                </OR>
+                            </displayCond>
+							<config>
+								<type>group</type>
+	                                <internal_type>db</internal_type>
+	                                <allowed>pages</allowed>
+	                                <size>1</size>
+	                                <maxitems>1</maxitems>
+	                                <minitems>0</minitems>
+	                                <show_thumbs>1</show_thumbs>
+	                                <wizards>
+	                                    <suggest>
+	                                        <type>suggest</type>
+	                                    </suggest>
+	                                </wizards>
+							</config>
+						</TCEforms>
+					</settings.myListPageId>
+					<!-- Product List Page Id -->
+
+					<!-- Product Create Page Id -->
+					<settings.createPageId>
+						<TCEforms>
+							<label>LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.create_page</label>
+							<displayCond>
+								<OR>
+                               		<numIndex>FIELD:switchableControllerActions:=:Products->userproducts;Products->delete;Products->hide;Products->showProduct</numIndex>
+                               	</OR>
+                            </displayCond>
+							<config>
+								<type>group</type>
+	                                <internal_type>db</internal_type>
+	                                <allowed>pages</allowed>
+	                                <size>1</size>
+	                                <maxitems>1</maxitems>
+	                                <minitems>0</minitems>
+	                                <show_thumbs>1</show_thumbs>
+	                                <wizards>
+	                                    <suggest>
+	                                        <type>suggest</type>
+	                                    </suggest>
+	                                </wizards>
+							</config>
+						</TCEforms>
+					</settings.createPageId>
+					<!-- Product Create Page Id -->
+
+					<!-- Max Advertisement -->
+					<settings.maxAdsPerPage>
+						<TCEforms>
+							<label>LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.max_ads_per_page_title</label>
+							<displayCond>
+								<OR>
+                                	<numIndex>FIELD:switchableControllerActions:=:Products->list</numIndex>
+                                	<OR>
+                                		<numIndex>FIELD:switchableControllerActions:=:Products->search;Products->searchresult</numIndex>
+                                		<OR>
+		                        			<numIndex>FIELD:switchableControllerActions:=:Products->userproducts;Products->delete;Products->hide;Products->showProduct</numIndex>
+		                        		</OR>
+                                	</OR>
+                                </OR>
+							</displayCond>
+							<config>
+								<type>input</type>
+								<eval>num</eval>
+								<size>3</size>
+							</config>
+						</TCEforms>
+					</settings.maxAdsPerPage>
+					<!-- Max Advertisement -->
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

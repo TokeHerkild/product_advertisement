@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-09T18:43:17Z" product-name="product_advertisement">
+		<header/>
+		<body>
+			<trans-unit id="tx_productadvertisement_domain_model_category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_category.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_category.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products">
+				<source>Products</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.fromdate">
+				<source>Fromdate</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.todate">
+				<source>Todate</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownername">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.owneremail">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerphone">
+				<source>Contact</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerzip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerplace">
+				<source>Place</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.approve">
+				<source>Approve</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_users">
+				<source>Users</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.timeduration">
+				<source>Available From - To</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

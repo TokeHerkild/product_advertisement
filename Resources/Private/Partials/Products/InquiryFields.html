@@ -1,0 +1,36 @@
+ <div class="form-space">
+ 	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="User Name"> 
+					<f:translate key="tx_productadvertisement_domain_model_products.name" />*
+				</label>
+				<f:form.textfield property="name" class="form-control validate" id="name"/>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="User Email"> 
+					<f:translate key="tx_productadvertisement_domain_model_products.owneremail" />*
+				</label>
+				<f:form.textfield property="email" class="form-control validate" id="owneremail"/>
+			</div>
+		</div>
+	</div>
+	<div class="form-space">
+		<div class="row">
+			<div class="col-md-offset-4 col-md-4">
+				<label for="User Telephone"> 
+					<f:translate key="tx_productadvertisement_domain_model_products.ownerphone" />
+				</label>
+				<f:form.textfield property="telephone" class="form-control" id="phone"/>
+			</div>
+		</div>
+	</div>
+	<div class="form-space">
+		<label for="description">
+			<f:translate key="tx_productadvertisement_domain_model_products.description" />*
+		</label>
+		<f:form.textarea property="message" class="form-control validate" rows="3" />
+	</div>
+ </div>

@@ -1,0 +1,168 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        SearchBack.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+
+	<link rel="stylesheet" href="{f:uri.resource(path:'css/jquery-ui.min.css')}" />
+	<link rel="stylesheet" href="{f:uri.resource(path:'css/backend-style.css')}" />
+	<script src="{f:uri.resource(path:'js/jquery-1.11.3.min.js')}"></script>
+	<script src="{f:uri.resource(path:'js/jquery-ui.js')}"></script>
+	<script src="{f:uri.resource(path:'js/product.js')}"></script>
+
+	<h1><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:manage.products" /></h1>
+
+	<f:flashMessages />
+	<div class="row">
+		<div class="col-md-offset-9 col-md-3 col-sm-offset-9 col-sm-3">
+			<f:link.action action="newCategory" class="go-back">
+				<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:manage.categorises" />
+			</f:link.action>
+			<br /><br />
+		</div>
+	</div>
+	<f:form action="searchBack" id="SearchProducts" name="SearchProducts" object="{SearchProducts}" method="post" noCache="1">
+		<div class="row">	
+			<div class="col-md-4 col-sm-4">
+				<div class="form-group">
+					<label for="Product Name">
+						<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:searchfield.name" />
+					</label>
+					<f:form.textfield class="form-control" name="productName" value="{productName}" />
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<div class="form-group">
+					<label for="Product Category">
+						<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:searchfield.category" />
+					</label>
+					<f:form.select name="category" class="form-control" value="{categoryUid}" options="{categories}" optionValueField="uid" optionLabelField="name" prependOptionLabel="<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:searchfield.default_category' />"/>
+				</div>
+			</div>	
+			<div class="col-md-4 col-sm-4">
+				<div class="form-group">
+					<label for="Place">
+						<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:searchfield.place" />
+					</label>
+					<f:form.textfield class="form-control" name="place" value="{place}"/>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-sm-4">
+				<div class="form-group">
+					<label for="fromdate">
+						<f:translate key="tx_productadvertisement_domain_model_products.fromdate" />		
+					</label>
+					<f:if condition="{fromdate}">
+						<f:then>
+							<f:form.textfield name="fromdate" class="form-control" readonly="readonly" id="fromdateBack" value="{fromdate->f:format.date(format:'Y-m-d')}" />		
+						</f:then>
+						<f:else>
+							<f:form.textfield name="fromdate" class="form-control" readonly="readonly" id="fromdateBack" />		
+						</f:else>
+					</f:if>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<div class="form-group">
+					<label for="todate">
+						<f:translate key="tx_productadvertisement_domain_model_products.todate" />
+					</label>
+					<f:if condition="{todate}">
+						<f:then>
+							<f:form.textfield name="todate" id="todateBack" class="form-control" readonly="readonly" value="{todate->f:format.date(format:'Y-m-d')}" />
+						</f:then>
+						<f:else>
+							<f:form.textfield name="todate" id="todateBack" class="form-control" readonly="readonly" />	
+						</f:else>
+					</f:if>
+							
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<div class="from-group">
+					<label for="Approve Status">
+						<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:product_registration.approvestatus' />
+					</label>
+					<f:form.select name="approved" class="form-control validate" value="{approved}" optionValueField="uid" optionLabelField="title" prependOptionLabel="<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:product_registration.approveList' />"
+					options="{
+					0: '{f:translate(key: \'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.disapprove\')}',
+					1: '{f:translate(key: \'tx_productadvertisement_domain_model_products.approve\')}'
+					}"
+					/>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-8 col-sm-offset-8 col-md-4 col-sm-4">
+				<div class="form-group">
+					<f:form.submit value="<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product.search' />" name="searchBtn" class="submit-btn" />
+				</div>		
+			</div>
+		</div>
+	</f:form>
+
+	<f:widget.paginate objects="{product}" as="productList" configuration="{configure}">
+		<table  class="table" >
+			<tr>
+				<th><f:translate key="tx_productadvertisement_domain_model_products.fromdate" /></th>
+				<th><f:translate key="tx_productadvertisement_domain_model_products.name" /></th>
+				<th>
+					<f:translate key="tx_productadvertisement_domain_model_products.approve" /> / 
+					<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.disapprove" />
+				</th>
+				<th><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.edit" /></th>
+				<th><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.delete" /></th>
+			</tr>
+			<f:for each="{productList}" as="products">
+				<f:if condition="{products.approve} == 1">
+					<f:then>
+						<tr style="background:#c6c6c6;">
+					</f:then>	
+					<f:else>
+						<tr>
+					</f:else>
+				</f:if>
+				
+					<td>{products.fromdate -> f:format.date()}</td>
+					<td>{products.name}</td>
+					<td>
+						<f:if condition="{products.approve} == 0">
+							<f:then>
+								<f:link.action action="approve" arguments="{products : products}">
+									<f:translate key="tx_productadvertisement_domain_model_products.approve" />
+								</f:link.action>	
+							</f:then>
+							<f:else>
+								<f:link.action action="disapprove" arguments="{products : products}">
+									<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.disapprove" />
+								</f:link.action>
+							</f:else>	
+						</f:if>
+					</td>
+					<td>
+						<f:link.action action="editMod" arguments="{products : products}">
+							<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.edit" />
+						</f:link.action>
+					</td>
+					<td>
+						<f:link.action action="delete" arguments="{products : products}">
+							<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.delete" />
+						</f:link.action>
+					</td>
+				</tr>
+			</f:for>
+		</table>
+	</f:widget.paginate>
+</f:section>

@@ -1,0 +1,138 @@
+{namespace h=Drcsystems\ProductAdvertisement\ViewHelpers}
+
+<div class="form-space">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="Product Name"> 
+					<f:translate key="tx_productadvertisement_domain_model_products.name" />*
+				</label>
+				<f:form.textfield property="name" class="form-control validate" id="name"/>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="Product Image"> 
+					<f:translate key="tx_productadvertisement_domain_model_products.images" />
+				</label>
+				<h:form.upload property="images.0" id="images" class="form-control">
+					<f:if condition="{resource}">
+						<f:image image="{resource}" alt="" width="50"/>
+					</f:if>
+				</h:form.upload>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="description">
+			<f:translate key="tx_productadvertisement_domain_model_products.description" />*
+		</label>
+		<f:form.textarea property="description" class="form-control validate" rows="3" />
+	</div>
+</div>
+<div class="form-space">
+	<div class="row">
+		<div class="col-md-offset-2 col-md-4">
+			<div class="form-group">
+				<label for="fromdate">
+					<f:translate key="tx_productadvertisement_domain_model_products.fromdate" />*			
+				</label>
+				<f:form.textfield property="fromdate" name="fromdate" class="form-control validate" readonly="readonly" id="fromdate" value="{products.fromdate->f:format.date(format:'Y-m-d')}" />		
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<label for="todate">
+					<f:translate key="tx_productadvertisement_domain_model_products.todate" />*		
+				</label>
+				<f:form.textfield property="todate" id="todate" class="t3js-datetimepicker form-control validate" readonly="readonly" value="{products.todate->f:format.date(format:'Y-m-d')}" />		
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-offset-2 col-md-8">
+			<div class="form-group"> 
+				<label for="type">
+					<f:translate key="tx_productadvertisement_domain_model_products.type" />*			
+				</label>
+				<f:form.select name="type" property="type" id="type" class="form-control validate" value="{uid}" optionValueField="uid" optionLabelField="title" prependOptionLabel="<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:product_registration.typeLable' />"
+				options="{
+				1: '{f:translate(key: \'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:product_registration.search\')}',
+				2: '{f:translate(key: \'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:product_registration.offer\')}'
+				}"
+				/>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="form-space">
+	<label for="Product Category"><f:translate key="tx_productadvertisement_domain_model_category" />*</label>
+	<div class="product-cats">
+		<div class="row">
+		<f:for each="{categories}" as="cats">		
+			<div class="col-md-4 col-sm-4">
+				<f:form.checkbox class="checks" property="category" value="{cats.uid}" multiple="1"/>
+				<span>{cats.name}</span>
+			</div>
+		</f:for>
+		</div>
+	</div>
+</div>
+
+<div class="form-space">
+	<h2>Owner Information</h2>
+	<div class="row">
+		<div class="col-md-5">
+			<div class="form-group">
+				<label for="ownername">
+					<f:translate key="tx_productadvertisement_domain_model_products.ownername" />*
+				</label>
+				<f:form.textfield property="ownername" id="ownername" class="form-control validate"/>
+			</div>	
+		</div>
+		<div class="col-md-offset-2 col-md-5">
+			<div class="form-group">
+				<label for="owneremail">
+					<f:translate key="tx_productadvertisement_domain_model_products.owneremail" />*
+				</label>
+				<f:form.textfield property="owneremail" id="owneremail" class="form-control validate"/>
+			</div>	
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-5">
+			<div class="form-group">
+				<label for="ownerphone">
+					<f:translate key="tx_productadvertisement_domain_model_products.ownerphone" />
+				</label>
+				<f:form.textfield property="ownerphone" class="form-control" id="ownerphone" />
+			</div>	
+		</div>
+		<div class="col-md-offset-2 col-md-5">
+			<div class="form-group">
+				<label for="ownerzip">
+					<f:translate key="tx_productadvertisement_domain_model_products.ownerzip" />*
+				</label>
+				<f:form.textfield property="ownerzip" id="ownerzip" class="form-control validate"/>
+			</div>	
+		</div>
+	</div>
+		
+	<div class="row">
+		<div class="col-md-5">
+			<div class="form-group">
+				<label for="ownerplace">
+					<f:translate key="tx_productadvertisement_domain_model_products.ownerplace" />*
+				</label>
+				<f:form.textfield property="ownerplace" class="form-control validate" id="ownerplace" />
+			</div>	
+		</div>
+	</div>
+</div>
+<label for="user">
+	<f:translate key="tx_productadvertisement_domain_model_products.user" />
+</label><br/>
+<p>{products.user.username}</p>

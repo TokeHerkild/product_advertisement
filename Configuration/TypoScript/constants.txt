@@ -1,0 +1,46 @@
+
+plugin.tx_productadvertisement_products {
+	view {
+		# cat=plugin.tx_productadvertisement_products/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:product_advertisement/Resources/Private/Templates/
+		# cat=plugin.tx_productadvertisement_products/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:product_advertisement/Resources/Private/Partials/
+		# cat=plugin.tx_productadvertisement_products/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:product_advertisement/Resources/Private/Layouts/
+	}
+	persistence{
+		# cat=plugin.tx_productadvertisement_products//a; type=string; label=Admin Email Address
+		emailAdmin = 
+
+		# cat=plugin.tx_productadvertisement_products//a; type=string; label=Create Product Notification Subject
+		createProduct = 
+
+		# cat=plugin.tx_productadvertisement_products//a; type=string; label=Edit Product Notification Subject
+		modifyProduct = 
+
+		# cat=plugin.tx_productadvertisement_products//a; type=string; label=Approve Notification Subject
+		approveSubject = 
+
+		# cat=plugin.tx_productadvertisement_products//a; type=string; label=Disapprove Notification Subject
+		disapproveSubject =
+	}
+	
+}
+
+module.tx_productadvertisement_modproducts {
+	view {
+		# cat=module.tx_productadvertisement_modproducts/file; type=string; label=Path to template root (BE)
+		templateRootPath = EXT:product_advertisement/Resources/Private/Backend/Templates/
+		# cat=module.tx_productadvertisement_modproducts/file; type=string; label=Path to template partials (BE)
+		partialRootPath = EXT:product_advertisement/Resources/Private/Backend/Partials/
+		# cat=module.tx_productadvertisement_modproducts/file; type=string; label=Path to template layouts (BE)
+		layoutRootPath = EXT:product_advertisement/Resources/Private/Backend/Layouts/
+	}
+	persistence {
+		# cat=module.tx_productadvertisement_modproducts//a; type=string; label=Default storage PID
+		storagePid =
+	}
+	settings{
+		createProductSubject = 
+	}
+}

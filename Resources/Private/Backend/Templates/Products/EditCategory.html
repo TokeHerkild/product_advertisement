@@ -1,0 +1,36 @@
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        EditCategory.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+	<link rel="stylesheet" href="{f:uri.resource(path:'css/backend-style.css')}" />
+	<script src="{f:uri.resource(path:'js/jquery-1.11.3.min.js')}"></script>
+
+	<h1><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:category_edit" /></h1>
+	<f:flashMessages />
+
+	<f:form action="updateCategory" id="NewCategory" name="category" object="{category}" method="post" noCache="1">
+		<div class="form-group">
+			<label for="Category name"><f:translate key="tx_productadvertisement_domain_model_category.name" /></label>
+			<f:form.textfield property="name" class="form-control" value="{category.name}" />
+		</div>
+		<div class="form-group">
+			<label for="Category description"><f:translate key="tx_productadvertisement_domain_model_category.description" /></label>
+			<f:form.textarea property="description" class="form-control" value="{category.description}"/>
+		</div>
+		<div class="form-group">
+			<div class="col-md-offset-8 col-sm-offset-8 col-md-4 col-sm-4">
+				<f:form.submit value="<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:save_data' />" name="editCatBtn" class="submit-btn" />
+			</div>
+		</div>
+	</f:form>
+</f:section>

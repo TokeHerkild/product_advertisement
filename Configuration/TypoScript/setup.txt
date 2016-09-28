@@ -1,0 +1,43 @@
+
+plugin.tx_productadvertisement_products {
+	view {
+		templateRootPaths.0 = {$plugin.tx_productadvertisement_products.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_productadvertisement_products.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_productadvertisement_products.view.layoutRootPath}
+	}
+	settings{
+		emailAdmin = {$plugin.tx_productadvertisement_products.persistence.emailAdmin}
+		createProduct = {$plugin.tx_productadvertisement_products.persistence.createProduct}
+		modifyProduct = {$plugin.tx_productadvertisement_products.persistence.modifyProduct}
+		approveSubject = {$plugin.tx_productadvertisement_products.persistence.approveSubject}
+		disapproveSubject = {$plugin.tx_productadvertisement_products.persistence.disapproveSubject}
+	}
+}
+
+ # Module configuration
+module.tx_productadvertisement_web_productadvertisementmodproducts {
+	persistence {
+		storagePid = {$module.tx_productadvertisement_modproducts.persistence.storagePid}
+	}
+	view {
+		templateRootPaths.0 = {$module.tx_productadvertisement_modproducts.view.templateRootPath}
+		partialRootPaths.0 = {$module.tx_productadvertisement_modproducts.view.partialRootPath}
+		layoutRootPaths.0 = {$module.tx_productadvertisement_modproducts.view.layoutRootPath}
+	}
+	settings < plugin.tx_productadvertisement_products.settings
+}
+
+page = PAGE
+page.includeCSS{
+	bootstrapCss = EXT:product_advertisement/Resources/Public/css/bootstrap.min.css
+	jqueryUi = EXT:product_advertisement/Resources/Public/css/jquery-ui.min.css
+	style = EXT:product_advertisement/Resources/Public/css/style.css
+}
+page.includeJSFooter{
+	jquery = EXT:product_advertisement/Resources/Public/js/jquery-1.11.3.min.js
+	jqueryUiJs = EXT:product_advertisement/Resources/Public/js/jquery-ui.js
+	bootstapJs = EXT:product_advertisement/Resources/Public/js/bootstrap.min.js
+	createProduct = EXT:product_advertisement/Resources/Public/js/product.js
+}
+
+

@@ -1,0 +1,74 @@
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        NewCategory.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">	
+	<link rel="stylesheet" href="{f:uri.resource(path:'css/backend-style.css')}" />
+	<script src="{f:uri.resource(path:'js/jquery-1.11.3.min.js')}"></script>
+
+	<f:link.action action="searchBack" class="go-back">
+		<span class="glyphicon glyphicon-menu-left"></span> 
+		<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product.go_back' />
+	</f:link.action>
+	<br /><br />
+	<h1><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:category_addnew" /></h1>
+	<f:flashMessages />
+	
+	<f:form action="createCategory" id="NewCategory" name="newCategory" object="{newCategory}" method="post" noCache="1">
+		<div class="form-group">
+			<label for="Category name"><f:translate key="tx_productadvertisement_domain_model_category.name" /></label>
+			<f:form.textfield property="name" class="form-control" />
+		</div>
+		<div class="form-group">
+			<label for="Category description"><f:translate key="tx_productadvertisement_domain_model_category.description" /></label>
+			<f:form.textarea property="description" class="form-control" />
+		</div>
+		<div class="form-group">
+			<div class="col-md-offset-8 col-sm-offset-8 col-md-4 col-sm-4">
+				<f:form.submit value="<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:save_data' />" name="newCatBtn" class="submit-btn" />
+			</div>
+		</div>
+	</f:form>
+
+	<f:widget.paginate objects="{categories}" as="categoryList" configuration="{configure}">
+		<table class="table">
+			<tr>
+				<th>
+				<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:category_uid" />
+				</th>
+				<th>
+					<f:translate key="tx_productadvertisement_domain_model_category.name" />
+				</th>
+				<th>
+					<f:translate key="tx_productadvertisement_domain_model_category.description" />
+				</th>
+				<th><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.edit" /></th>
+				<th>
+					<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.delete" />
+				</th>
+			</tr>
+			<f:for each="{categoryList}" as="category" iteration="itr">
+				<tr>
+					<td>{category.uid}</td>
+					<td>{category.name}</td>
+					<td>{category.description}</td>
+					<td><f:link.action action="editCategory" arguments="{category : category}">
+							<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.edit" />
+						</f:link.action> </td>
+					<td><f:link.action action="deleteCategory" arguments="{category : category}">
+						<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.delete" />
+					</f:link.action> </td>
+				</tr>
+			</f:for>
+		</table>
+	</f:widget.paginate>
+</f:section>

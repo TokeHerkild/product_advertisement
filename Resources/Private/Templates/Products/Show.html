@@ -1,0 +1,30 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	<h1><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:detail_page.name" /></h1>
+	<f:if condition="{listPage}">
+		<f:link.action pageUid="{listPage}" class="go-back"><span class="glyphicon glyphicon-menu-left"></span> <f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product.go_back' /></f:link.action>
+	</f:if>
+
+	<div class="product-detail">
+		<f:render partial="Products/Properties" arguments="{products:products}" />
+		<div class="button-group">
+			
+			<f:link.action  action="inquiry" class="ad-btn" arguments="{products:products}"><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:send_message_btn" /></f:link.action>
+
+			<span class="ad-btn" onclick="print();"><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:get_print_btn" /></span>
+		</div>
+	</div>
+</f:section>

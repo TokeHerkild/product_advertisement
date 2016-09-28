@@ -1,0 +1,38 @@
+
+<f:layout name="Default" />
+
+This template displays a EDIT form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        EditMod.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+	
+	<link rel="stylesheet" href="{f:uri.resource(path:'css/jquery-ui.min.css')}" />
+	<link rel="stylesheet" href="{f:uri.resource(path:'css/backend-style.css')}" />
+	<script src="{f:uri.resource(path:'js/jquery-1.11.3.min.js')}"></script>
+	<script src="{f:uri.resource(path:'js/jquery-ui.js')}"></script>
+	<script src="{f:uri.resource(path:'js/product.js')}"></script>
+
+	<f:link.action action="searchBack" class="go-back"><f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product.go_back' /></f:link.action>
+	<br /><br />
+
+	<h1>
+	<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:edit_product_title' />
+	</h1>
+
+	<f:flashMessages />
+
+	<f:render partial="FormErrors" />
+
+	<f:form action="updateMod" name="products" object="{products}" enctype="multipart/form-data">
+	<f:render partial="Products/FormFields" arguments="{_all}" />
+		<f:form.submit value="Save" class="submit-btn" />
+	</f:form>
+</f:section>

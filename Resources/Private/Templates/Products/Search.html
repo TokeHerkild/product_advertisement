@@ -1,0 +1,124 @@
+
+<f:layout name="Default" />
+
+This template displays a NEW form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Search.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	
+	<f:flashMessages />
+
+	<div class="tx-product-search">
+		<h1><f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:search_form.title' /></h1>
+		<f:form action="search" name="SearchProducts" id="searchForm" object="{SearchProducts}" method="post" >
+			<div class="row">	
+				<div class="col-md-4 col-sm-4">
+					<div class="form-group">
+						<label for="Product Name">
+							<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:searchfield.name" />
+						</label>
+						<f:form.textfield class="form-control" name="productName" value="{productName}" />
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="form-group">
+						<label for="Product Category">
+							<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:searchfield.category" />
+						</label>
+						<f:form.select name="category" class="form-control" value="{categoryUid}" options="{categories}" optionValueField="uid" optionLabelField="name" prependOptionLabel="<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:searchfield.default_category' />"/>
+					</div>
+				</div>	
+				<div class="col-md-4 col-sm-4">
+					<div class="form-group">
+						<label for="Place">
+							<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:searchfield.place" />
+						</label>
+						<f:form.textfield class="form-control" name="place" value="{place}"/>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<label for="Fromdate">
+						<f:translate key="tx_productadvertisement_domain_model_products.fromdate" />
+					</label>
+					<f:form.textfield name="fromdate" class="form-control validate" readonly="readonly" id="fromdateBack" value="{fromdate->f:format.date(format:'Y-m-d')}" />	
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<label for="Fromdate">
+						<f:translate key="tx_productadvertisement_domain_model_products.todate" />
+					</label>
+					<f:form.textfield name="todate" id="todateBack" class="form-control validate" readonly="readonly" value="{todate->f:format.date(format:'Y-m-d')}" />	
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="form-group">
+						<f:form.submit value="<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product.search' />" name="searchBtn" class="submit-btn" />
+					</div>		
+				</div>
+			</div>
+		</f:form>
+	</div>
+	<div class="product-list">
+		<f:if condition="{product}">
+			<f:then>
+				<f:widget.paginate objects="{product}" as="productList" configuration="{configure}">
+					<div class="row">
+						<f:for each="{productList}" as="products">
+							<div class="col-md-4 col-sm-4">			
+								<div class="thumbnail">
+									<div class="product-image">
+										<f:link.action  action="show" arguments="{products : products}" pageUid="{detailPage}">
+											<f:if condition="{products.images}">
+												<f:then>
+													<f:for each="{products.images}" as="imgs">
+														<f:if condition="{imgs.originalResource.publicUrl}">
+															<f:image src="{imgs.originalResource.publicUrl}" class="img-responsive"/>
+														</f:if>
+													</f:for>
+												</f:then>
+												<f:else>
+													<f:image src="EXT:product_advertisement/Resources/Public/img/no-img.png" class="img-responsive"/>
+												</f:else>
+											</f:if>		
+										</f:link.action>
+									</div>
+									<div class="caption product-caption">
+										<f:if condition="{products.name}">
+											<f:link.action  action="show" arguments="{products : products}" pageUid="{detailPage}">
+												<h3>{products.name}</h3>
+											</f:link.action>
+										</f:if>
+										<f:if condition="{products.ownerplace}">
+											<p>{products.ownerplace}</p>
+										</f:if>
+										<f:if condition="{products.category}">
+											<ul class="breadcrumb">
+												<f:for each="{products.category}" as="cats">
+													<li>{cats.name}</li>
+												</f:for>
+											</ul>
+										</f:if>
+									</div>
+								</div>
+							</div>		
+						</f:for>
+					</div>
+				</f:widget.paginate>
+			</f:then>
+			<f:else>
+				<h2>
+					<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:searchpage.no_product_found" />
+				</h2>
+			</f:else>
+		</f:if>
+	</div>
+
+</f:section>

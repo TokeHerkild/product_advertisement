@@ -1,0 +1,65 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+<f:section name="main">
+	<h1><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:product_list_title" /></h1>
+
+	<f:flashMessages />
+
+	<f:widget.paginate objects="{product}" as="productList" configuration="{configure}">
+		<div class="row">
+			<f:for each="{productList}" as="products">
+				<div class="col-md-4 col-sm-4">			
+					<div class="thumbnail">
+						<div class="product-image">
+							<f:if condition="{products.images}">
+								<f:then>
+									<f:for each="{products.images}" as="imgs">
+										<f:if condition="{imgs.originalResource.publicUrl}">
+											<f:link.action  action="show" arguments="{products : products}" pageUid="{detailPageId}">
+												<f:image src="{imgs.originalResource.publicUrl}" class="img-responsive"/>
+											</f:link.action>	
+										</f:if>
+									</f:for>
+								</f:then>
+								<f:else>
+									<f:link.action  action="show" arguments="{products : products}" pageUid="{detailPageId}">
+										<f:image src="EXT:product_advertisement/Resources/Public/img/no-img.png" class="img-responsive"/>
+									</f:link.action>
+								</f:else>
+							</f:if>		
+						</div>
+						<div class="caption product-caption">
+							<f:if condition="{products.name}">
+								<f:link.action  action="show" arguments="{products : products}" pageUid="{detailPageId}">
+									<h3>{products.name}</h3>
+								</f:link.action>
+							</f:if>
+							
+							<f:if condition="{products.ownerplace}">
+								<p>{products.ownerplace}</p>
+							</f:if>
+							<f:if condition="{products.category}">
+								<ul class="breadcrumb">
+									<f:for each="{products.category}" as="cats">
+										<li>{cats.name}</li>
+									</f:for>
+								</ul>
+							</f:if>
+						</div>
+					</div>
+				</div>		
+			</f:for>
+		</div>
+	</f:widget.paginate>
+</f:section>

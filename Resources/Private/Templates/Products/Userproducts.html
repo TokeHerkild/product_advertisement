@@ -1,0 +1,87 @@
+
+<f:layout name="Default" />
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Userproducts.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+<f:section name="main">
+
+	<h1><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product_list" /></h1>
+
+	<f:flashMessages />
+
+	<f:link.action  action="new" class="go-back" pageUid="{createProduct}"><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product.new_product" /></f:link.action>
+
+	<f:widget.paginate objects="{userProducts}" as="productList" configuration="{configure}">
+		<div class="user-product-list">
+			<table class="table">
+				<tr>
+					<th>
+						<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.images" />
+					</th>
+					<th>
+						<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.name" />
+					</th>
+					<th>
+						<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product.time_period" />
+					</th>
+					<th colspan="2">
+						<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product.user_action" />
+					</th>
+				</tr>
+				<f:for each="{productList}" as="products" iteration="iter">
+					<f:if condition="{products.status}">
+						<f:then>
+							<tr>
+						</f:then>
+						<f:else>
+							<tr class="hidden-product">
+						</f:else>
+					</f:if>
+						<td>
+							<f:if condition="{products.images}">
+								<f:then>
+									<f:image src="{products.images.0.originalResource.publicUrl}" width="150px" />
+								</f:then>
+								<f:else>
+									<f:image src="EXT:product_advertisement/Resources/Public/img/no-img.png" class="option" width="150px"/>
+								</f:else>
+							</f:if>						
+						</td>
+						<td>{products.name}</td>
+						<td>
+							<f:format.date format="d-m-Y">{products.fromdate}</f:format.date> 
+								<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product.to" />
+							<f:format.date format="d-m-Y">{products.todate}</f:format.date>
+						</td>
+						<td>
+							<f:link.action action="edit" class="go-back" arguments="{products : products}" pageUid="{createProduct}" noCache="true">
+								<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product.edit_product" />
+							</f:link.action>
+						</td>
+						<td>
+							<f:if condition="{products.status}">
+								<f:then>
+									<f:link.action action="hide" class="go-back-red" arguments="{products : products}">
+										<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product.deactivate_product" />
+									</f:link.action>
+								</f:then>
+								<f:else>
+									<f:link.action action="showProduct" class="go-back-red" arguments="{products : products}">
+										<f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:user_product.activate_product" />
+									</f:link.action>
+								</f:else>
+							</f:if>
+						</td>
+					</tr>
+				</f:for>
+			</table>
+		</div>
+	</f:widget.paginate>
+</f:section>

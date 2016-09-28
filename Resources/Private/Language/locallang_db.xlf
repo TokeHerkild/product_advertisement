@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-09T18:43:17Z" product-name="product_advertisement">
+		<header/>
+		<body>
+			<trans-unit id="tx_productadvertisement_domain_model_category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_category.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_category.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products">
+				<source>Products</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.name">
+				<source>Product Name</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.fromdate">
+				<source>Fromdate</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.todate">
+				<source>Todate</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="product_registration.typeLable">
+				<source>-- Select Product Type --</source>
+			</trans-unit>
+			<trans-unit id="product_registration.search">
+				<source>Search</source>
+			</trans-unit>
+			<trans-unit id="product_registration.offer">
+				<source>Offer</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownername">
+				<source>Owner Name</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.owneremail">
+				<source>Owner Email</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerphone">
+				<source>Owner Contact</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerzip">
+				<source>Owner Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerplace">
+				<source>Owner Place</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.status">
+				<source>Product Status</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.approve">
+				<source>Approve</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_users">
+				<source>Users</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.disapprove">
+				<source>Disapprove</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.edit">
+				<source>Edit</source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.delete">
+				<source>Delete</source>
+			</trans-unit>
+			<trans-unit id="fe_users.tx_extbase_type.Tx_ProductAdvertisement_Users">
+				<source>Products Advertisement Users</source>
+			</trans-unit>
+			<trans-unit id="product_list_title">
+				<source>Products</source>
+			</trans-unit>
+			<trans-unit id="detail_page.name">
+				<source>Product Details</source>
+			</trans-unit>
+			<trans-unit id="inquiry_form">
+				<source>Inquiry Form</source>
+			</trans-unit>
+			<trans-unit id="create_new_product.title">
+				<source>Create New Advertisement</source>
+			</trans-unit>
+			<trans-unit id="owner_info">
+				<source>Owner Information</source>
+			</trans-unit>
+			<trans-unit id="search_form.title">
+				<source>Search</source>
+			</trans-unit>
+			<trans-unit id="edit_page.name">
+				<source>Edit Products</source>
+			</trans-unit>
+			<trans-unit id="searchfield.name">
+				<source>Product Name</source>
+			</trans-unit>
+			<trans-unit id="searchfield.category">
+				<source>Product Category</source>
+			</trans-unit>
+			<trans-unit id="searchfield.default_category">
+				<source>Select Category</source>
+			</trans-unit>
+			<trans-unit id="searchfield.place">
+				<source>Product Place</source>
+			</trans-unit>
+			<trans-unit id="searchpage.no_product_found">
+				<source>Oppss.. No Such Product Found.. :(</source>
+			</trans-unit>
+			<trans-unit id="user_product_list">
+				<source>My Products</source>
+			</trans-unit>			
+			<trans-unit id="user_product.new_product">
+				<source>Create New Product</source>
+			</trans-unit>
+			<trans-unit id="user_product.edit_product">
+				<source>Edit</source>
+			</trans-unit>
+			<trans-unit id="user_product.deactivate_product">
+				<source>Hide</source>
+			</trans-unit>
+			<trans-unit id="user_product.activate_product">
+				<source>Show</source>
+			</trans-unit>			
+			<trans-unit id="user_product.delete_product">
+				<source>Delete</source>
+			</trans-unit>
+			<trans-unit id="user_product.user_action">
+				<source>Action</source>
+			</trans-unit>
+			<trans-unit id="user_product.time_period">
+				<source>Time Period</source>
+			</trans-unit>
+			<trans-unit id="user_product.search">
+				<source>Search</source>
+			</trans-unit>
+			<trans-unit id="user_product.to">
+				<source>to</source>
+			</trans-unit>			
+			<trans-unit id="manage.products">
+				<source>Manage Products</source>
+			</trans-unit>
+			<trans-unit id="manage.categorises">
+				<source>Manage Categories</source>
+			</trans-unit>
+			<trans-unit id="user_product.go_back">
+				<source>Product List</source>
+			</trans-unit>
+			<trans-unit id="product_registration.approvestatus">
+				<source>Approve Status</source>
+			</trans-unit>			
+			<trans-unit id="product_registration.approveList">
+				<source>Approve / Disapprove</source>
+			</trans-unit>	
+			<trans-unit id="category_uid">
+				<source>Category Uid</source>
+			</trans-unit>	
+			<trans-unit id="category_addnew">
+				<source>Add New Category</source>
+			</trans-unit>
+			<trans-unit id="category_edit">
+				<source>Edit Category</source>
+			</trans-unit>
+			<trans-unit id="save_data">
+				<source>Save</source>
+			</trans-unit>				
+			<trans-unit id="edit_product_title">
+				<source>Save</source>
+			</trans-unit>
+			<trans-unit id="send_now">
+				<source>Send Now</source>
+			</trans-unit>
+			<trans-unit id="create_new">
+				<source>Create New</source>
+			</trans-unit>
+			<trans-unit id="send_message_btn">
+				<source>Send Message</source>
+			</trans-unit>
+			<trans-unit id="get_print_btn">
+				<source>Get Print</source>
+			</trans-unit>
+			<trans-unit id="email_header">
+				<source>Notification for you..!</source>
+			</trans-unit>
+			<trans-unit id="mail_start_prefix">
+				<source>Dear</source>
+			</trans-unit>
+			<trans-unit id="active_product_description_start">
+				<source>Your product</source>
+			</trans-unit>
+			<trans-unit id="has_approve_msg">
+				<source>has been approved by admin.</source>
+			</trans-unit>
+			<trans-unit id="email_footer">
+				<source>Have a Great Day..!</source>
+			</trans-unit> 
+			<trans-unit id="admin_prefix">
+				<source>Dear Admin,</source>
+			</trans-unit>
+			<trans-unit id="mail_user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="has_register">
+				<source>has registered a product named</source>
+			</trans-unit>
+			<trans-unit id="check_out_msg">
+				<source>Please check it out.</source>
+			</trans-unit> 
+			<trans-unit id="disapproved_by">
+				<source>has disapproved by admin.</source>
+			</trans-unit>
+			<trans-unit id="thank_you_msg">
+				<source>Thank You for registering product</source>
+			</trans-unit>
+			<trans-unit id="thank_you_msg_extra">
+				<source>Your product has been registered successfully, We will notify you once admin approve it.</source>
+			</trans-unit>
+			<trans-unit id="update_msg">
+				<source>updated the product</source>
+			</trans-unit>
+			<trans-unit id="inquiry_start_msg">
+				<source>Your inquiry for product</source>
+			</trans-unit> 
+			<trans-unit id="inquiry_thanks_extra_part">
+				<source>has been registered, Thank you for choosing us.</source>
+			</trans-unit> 
+			<trans-unit id="inquiry_send_user_start">
+				<source>There is an inquiry for your product</source>
+			</trans-unit>
+			<trans-unit id="inquiry_user_name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="inquiry_user_email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="inquiry_user_phone">
+				<source>Contact No</source>
+			</trans-unit>
+			<trans-unit id="inquiry_user_msg">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="has_updated">
+				<source>has been updated successfully.</source>
+			</trans-unit> 
+			<trans-unit id="notify_once">
+				<source>We will notify you once Admin Approve It.</source>
+			</trans-unit>
+			<trans-unit id="updated_by_admin">
+				<source>has been updated by admin</source>
+			</trans-unit>
+		</body> 
+	</file>
+</xliff>

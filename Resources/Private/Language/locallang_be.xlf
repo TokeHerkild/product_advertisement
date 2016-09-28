@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-09T18:43:17Z" product-name="product_advertisement">
+		<header/>
+		<body>
+			<trans-unit id="flexform_module.name">
+				<source>Plugin Settings</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.plugin_dropdown">
+				<source>Select Plugin Function</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.plugin_dropdown_list_action">
+				<source>Product List</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.plugin_dropdown_new_action">
+				<source>Create Product Advertisement</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.plugin_dropdown_search_action">
+				<source>Product Search</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.plugin_dropdown_myproducts_action">
+				<source>My Products</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.plugin_dropdown_show_action">
+				<source>Single Product Detail</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.sorting_field_label">
+				<source>Products List Sort by Field </source>
+			</trans-unit>
+			<trans-unit id="flexform_module.sorting_field_label.by_title">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.sorting_field_label.by_cats">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.sorting_field_label.by_place">
+				<source>Place</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.sorting_field_label.by_start_date">
+				<source>Start Date</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.sorting_field_label.by_end_date">
+				<source>End Date</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.sorting_order_field">
+				<source>Sorting Order</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.sorting_order_field.asc">
+				<source>Ascending</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.sorting_order_field.desc">
+				<source>Descending</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.list_page">
+				<source>List Page Id</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.my_product_list_page">
+				<source>User Product Page Id</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.detail_page">
+				<source>Product Detail Page Id</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.create_page">
+				<source>Product Create Page Id</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.max_ads_per_page_title">
+				<source>Maximum Products Per Page</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.confirm_page">
+				<source>Set Form Confirmation Page ?</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.admin_email">
+				<source>Admin Email Address</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.create_product_subject">
+				<source>E-Mail Subject for Product Create</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.activate_product_subject">
+				<source>E-Mail Subject for Product Activate</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.deactivate_product_subject">
+				<source>E-Mail Subject for Product Deactivate</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.modify_product_subject">
+				<source>E-Mail Subject for Product detail Modify</source>
+			</trans-unit>
+			<trans-unit id="flexform_module.delete_product_subject">
+				<source>E-Mail Subject for Product Delete</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

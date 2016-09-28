@@ -1,0 +1,38 @@
+<f:layout name="Default" />
+
+This template displays a NEW form for the current domain object.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Inquiry.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	<h1><f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:inquiry_form' /></h1>
+
+	<f:flashMessages />
+
+	<f:render partial="FormErrors" arguments="{_all}" />
+
+	<f:form action="sendMessage" name="message" id="inquiry" object="{message}">
+		
+		<f:form.hidden property="userEmail" value="{products.user.email}" />
+		<f:form.hidden property="product" value="{products.name}" />
+		<f:form.hidden property="userName" value="{products.user.username}" />
+		
+		<f:render partial="Products/InquiryFields" arguments="{_all}"/>
+		
+		<div class="form-space"> 
+			<div class="row">
+				<div class="col-md-offset-4 col-md-4">
+					<f:form.submit value="<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:send_now' />" id="send" class="submit-btn"/>
+				</div>
+			</div>
+		</div>
+
+	</f:form>
+</f:section>
