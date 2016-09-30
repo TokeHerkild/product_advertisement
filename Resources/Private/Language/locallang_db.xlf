@@ -30,6 +30,9 @@
 			<trans-unit id="tx_productadvertisement_domain_model_products.todate">
 				<source>Todate</source>
 			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.price">
+				<source>Price</source>
+			</trans-unit>
 			<trans-unit id="tx_productadvertisement_domain_model_products.type">
 				<source>Type</source>
 			</trans-unit>
@@ -37,10 +40,10 @@
 				<source>-- Select Product Type --</source>
 			</trans-unit>
 			<trans-unit id="product_registration.search">
-				<source>Search</source>
+				<source>Wants to purchase</source>
 			</trans-unit>
 			<trans-unit id="product_registration.offer">
-				<source>Offer</source>
+				<source>Wants to sale</source>
 			</trans-unit>
 			<trans-unit id="tx_productadvertisement_domain_model_products.ownername">
 				<source>Owner Name</source>
@@ -199,7 +202,7 @@
 				<source>Dear</source>
 			</trans-unit>
 			<trans-unit id="active_product_description_start">
-				<source>Your product</source>
+				<source>Your advertisement</source>
 			</trans-unit>
 			<trans-unit id="has_approve_msg">
 				<source>has been approved by admin.</source>
@@ -214,7 +217,7 @@
 				<source>User</source>
 			</trans-unit>
 			<trans-unit id="has_register">
-				<source>has registered a product named</source>
+				<source>has registered a advertisement named</source>
 			</trans-unit>
 			<trans-unit id="check_out_msg">
 				<source>Please check it out.</source>
@@ -223,22 +226,22 @@
 				<source>has disapproved by admin.</source>
 			</trans-unit>
 			<trans-unit id="thank_you_msg">
-				<source>Thank You for registering product</source>
+				<source>Thank You for registering advertisement</source>
 			</trans-unit>
 			<trans-unit id="thank_you_msg_extra">
-				<source>Your product has been registered successfully, We will notify you once admin approve it.</source>
+				<source>Your advertisement has been registered successfully, We will notify you once admin approve it.</source>
 			</trans-unit>
 			<trans-unit id="update_msg">
-				<source>updated the product</source>
+				<source>updated the advetisement</source>
 			</trans-unit>
 			<trans-unit id="inquiry_start_msg">
-				<source>Your inquiry for product</source>
+				<source>Your inquiry for advertisement</source>
 			</trans-unit> 
 			<trans-unit id="inquiry_thanks_extra_part">
 				<source>has been registered, Thank you for choosing us.</source>
 			</trans-unit> 
 			<trans-unit id="inquiry_send_user_start">
-				<source>There is an inquiry for your product</source>
+				<source>There is an inquiry for your product's advertisement</source>
 			</trans-unit>
 			<trans-unit id="inquiry_user_name">
 				<source>Name</source>
@@ -260,6 +263,9 @@
 			</trans-unit>
 			<trans-unit id="updated_by_admin">
 				<source>has been updated by admin</source>
+			</trans-unit>
+			<trans-unit id="crdate.posted-on">
+				<source>Posten on</source>
 			</trans-unit>
 		</body> 
 	</file>

@@ -49,11 +49,25 @@ class Products extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	protected $todate = null;
 
 	/**
+	 * crdate
+	 *
+	 * @var \DateTime
+	 */
+	protected $crdate = null;
+
+	/**
 	 * type
 	 *
 	 * @var int
 	 */
 	protected $type = 0;
+
+	/**
+	 * price
+	 *
+	 * @var string
+	 */
+	protected $price = '';
 
 	/**
 	 * ownername
@@ -231,6 +245,48 @@ class Products extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	public function setTodate(\DateTime $todate)
 	{
 		$this->todate = $todate;
+	}
+
+	/**
+	 * Returns the create date
+	 *
+	 * @return \DateTime $crdate
+	 */
+	public function getCrdate()
+	{
+		return $this->crdate;
+	}
+
+	/**
+	 * Sets the crdate
+	 *
+	 * @param \DateTime $crdate
+	 * @return void
+	 */
+	public function setCrdate(\DateTime $crdate)
+	{
+		$this->crdate = $crdate;
+	}
+
+	/**
+	 * Returns the price
+	 *
+	 * @return string $price
+	 */
+	public function getPrice()
+	{
+		return $this->price;
+	}
+
+	/**
+	 * Sets the price
+	 *
+	 * @param string $price
+	 * @return void
+	 */
+	public function setPrice($price)
+	{
+		$this->price = $price;
 	}
 
 	/**

@@ -18,6 +18,9 @@
 			<trans-unit id="todate.description">
 				<source>todate</source>
 			</trans-unit>
+			<trans-unit id="price.description">
+				<source>price</source>
+			</trans-unit>
 			<trans-unit id="type.description">
 				<source>type</source>
 			</trans-unit>

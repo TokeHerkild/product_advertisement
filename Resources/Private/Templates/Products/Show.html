@@ -20,11 +20,5 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 	<div class="product-detail">
 		<f:render partial="Products/Properties" arguments="{products:products}" />
-		<div class="button-group">
-			
-			<f:link.action  action="inquiry" class="ad-btn" arguments="{products:products}"><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:send_message_btn" /></f:link.action>
-
-			<span class="ad-btn" onclick="print();"><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:get_print_btn" /></span>
-		</div>
 	</div>
 </f:section>

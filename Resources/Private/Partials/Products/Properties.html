@@ -1,60 +1,74 @@
-<div class="product-image">
-	<f:if condition="{products.images}">
-		<f:then>
-			<f:for each="{products.images}" as="imgs">
-				<f:if condition="{imgs.originalResource.publicUrl}">
-					<f:image src="{imgs.originalResource.publicUrl}" class="img-responsive"/>
-				</f:if>
+<div class="row">
+	<div class="col-md-8">
+		<f:if condition="{products.name}">
+			<h2 class="product-title">{products.name}</h2>
+		</f:if>
+		<div class="product-image">
+			<f:if condition="{products.images}">
+				<f:then>
+					<f:for each="{products.images}" as="imgs">
+						<f:if condition="{imgs.originalResource.publicUrl}">
+							<f:image src="{imgs.originalResource.publicUrl}" class="img-responsive"/>
+						</f:if>
+					</f:for>
+				</f:then>
+				<f:else>
+					<f:image src="EXT:product_advertisement/Resources/Public/img/no-img.png" class="img-responsive"/>
+				</f:else>
+			</f:if>		
+		</div>
+		<f:if condition="{products.category}">
+			<ul class="category-name breadcrumb">
+			<f:for each="{products.category}" as="cats">
+				<li>{cats.name}</li>
 			</f:for>
-		</f:then>
-		<f:else>
-			<f:image src="EXT:product_advertisement/Resources/Public/img/no-img.png" class="img-responsive"/>
-		</f:else>
-	</f:if>		
-</div>
-<f:if condition="{products.category}">
-	<ul class="category-name breadcrumb">
-	<f:for each="{products.category}" as="cats">
-		<li>{cats.name}</li>
-	</f:for>
-	</ul>
-</f:if>
+			</ul>
+		</f:if>		
+	</div>	
+	<div class="col-md-4">
+		<div class="more-detail">
+			<f:if condition="{products.fromdate}">
+				<div class="spacing">
+					<span class="ad-title"><f:translate key="tx_productadvertisement_domain_model_products.timeduration" /></span>
+					<p><f:format.date format="d/m/Y">{products.fromdate}</f:format.date> - <f:format.date format="d/m/Y">{products.todate}</f:format.date></p>
+				</div>
+			</f:if>
+			<f:if condition="{products.ownerplace}">
+				<div class="spacing">
+					<span class="ad-title"><f:translate key="tx_productadvertisement_domain_model_products.ownerplace" /></span>
+					<p>{products.ownerplace}</p>
+				</div>
+			</f:if>
+			<f:if condition="{products.price}">
+				<div class="spacing">
+					<span class="ad-title"><f:translate key="tx_productadvertisement_domain_model_products.price" /></span>
+					<p>{products.price}</p>
+				</div>
+			</f:if>
+			<f:if condition="{products.ownername}">
+				<div class="spacing">
+					<span class="ad-title">Owner Detail</span>
+					<p><f:translate key="tx_productadvertisement_domain_model_products.ownername" /> : {products.ownername}</p>
+					<f:if condition="{products.owneremail}">
+						<a href="mailto:{products.owneremail}">{products.owneremail}</a>
+					</f:if>
+				</div>
+			</f:if>
+		</div>
+		<div class="button-group">
+			
+			<f:link.action  action="inquiry" class="ad-btn" arguments="{products:products}"><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:send_message_btn" /></f:link.action>
 
-<f:if condition="{products.name}">
-	<h2 class="product-title">{products.name}</h2>
-</f:if>
+			<span class="ad-btn" onclick="print();"><f:translate key="LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:get_print_btn" /></span>
+		</div>
+	</div>
+</div>
 
 <f:if condition="{products.description}">
-	<span class="hr-line"></span>
 	<div class="product-desc">
 		<h3>Product Description</h3>
 		<p>{products.description}</p>
 	</div>
-	<span class="hr-line"></span>
 </f:if>
 
-<div class="more-detail">
-	<div class="row">
-		<div class="col-md-4">
-			<f:if condition="{products.fromdate}">
-				<span class="ad-title"><f:translate key="tx_productadvertisement_domain_model_products.timeduration" /></span>
-				<p><f:format.date format="d/m/Y">{products.fromdate}</f:format.date> - <f:format.date format="d/m/Y">{products.todate}</f:format.date></p>
-			</f:if>
-		</div>
-		<div class="col-md-4">
-			<f:if condition="{products.ownerplace}">
-				<span class="ad-title"><f:translate key="tx_productadvertisement_domain_model_products.ownerplace" /></span>
-				<p>{products.ownerplace}</p>
-			</f:if>
-		</div>
-		<div class="col-md-4">
-			<f:if condition="{products.ownername}">
-				<span class="ad-title">Owner Detail</span>
-				<p><f:translate key="tx_productadvertisement_domain_model_products.ownername" /> : {products.ownername}</p>
-				<f:if condition="{products.owneremail}">
-					<a href="mailto:{products.owneremail}">{products.owneremail}</a>
-				</f:if>
-			</f:if>
-		</div>
-	</div>
-</div>
+

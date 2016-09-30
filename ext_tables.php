@@ -20,7 +20,7 @@ if (TYPO3_MODE === 'BE') {
 		'modproducts',	// Submodule key
 		'',						// Position
 		array(
-			'Products' => 'searchBack, editMod, updateMod, delete, approve, disapprove, newCategory, createCategory, editCategory, updateCategory, deleteCategory',
+			'Products' => 'searchBack, editMod, updateMod, delete, approve, disapprove, newCategory, createCategory, editCategory, updateCategory, deleteCategory, searchFirst',
 		),
 		array(
 			'access' => 'user,group',

@@ -51,10 +51,10 @@
 	</div>
 
 	<div class="row">
-		<div class="col-md-offset-2 col-md-8">
+		<div class="col-md-offset-2 col-md-4">
 			<div class="form-group"> 
 				<label for="type">
-					<f:translate key="tx_productadvertisement_domain_model_products.type" />*			
+					<f:translate key="tx_productadvertisement_domain_model_products.type" />*
 				</label>
 				<f:form.select name="type" property="type" id="type" class="form-control validate" value="{uid}" optionValueField="uid" optionLabelField="title" prependOptionLabel="<f:translate key='LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:product_registration.typeLable' />"
 				options="{
@@ -62,6 +62,14 @@
 				2: '{f:translate(key: \'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:product_registration.offer\')}'
 				}"
 				/>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<label for="price">
+					<f:translate key="tx_productadvertisement_domain_model_products.price" />*
+				</label>
+				<f:form.textfield property="price" id="price" class="form-control validate"/>
 			</div>
 		</div>
 	</div>

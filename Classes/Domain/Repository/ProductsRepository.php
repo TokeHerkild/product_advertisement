@@ -28,8 +28,14 @@ class ProductsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 	 */
 	public function findProducts($productArgs)
 	{
+		$today = date('Y-m-d');
 		$query = $this->createQuery();
-		$queryCondition = array($query->equals('status',1), $query->equals('approve',1));
+		$queryCondition = array(
+			$query->equals('status',1), 
+			$query->equals('approve',1),
+			$query->lessThanOrEqual('fromdate', $today),
+			$query->greaterThanOrEqual('todate', $today)
+		);
 		if (!empty($productArgs['productName'])) {
 			array_push($queryCondition, $query->like('name', '%' . $productArgs['productName'] . '%'));
 		}
@@ -43,7 +49,10 @@ class ProductsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 			array_push($queryCondition, $query->greaterThanOrEqual('fromdate', $productArgs['fromdate']));   
 		}
 		if(!empty($productArgs['todate'])){
-			array_push($queryCondition, $query->lessThanOrEqual('todate', $productArgs['todate']));   
+			array_push($queryCondition, $query->lessThanOrEqual('todate', $productArgs['todate']));
+		}
+		if(!empty($productArgs['type'])){
+			array_push($queryCondition, $query->equals('type', $productArgs['type']));	
 		}
 		if (count($queryCondition) > 0) {
 			$query->matching($query->logicalAnd($queryCondition));

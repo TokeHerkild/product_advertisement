@@ -10,17 +10,17 @@ Product Listing
 ^^^^^^^^^^^^^^^^
 Displays list of product advertisements.
 
-.. figure:: ../Images/screenshots/Advertisement-list.png
+.. figure:: ../Images/screenshots/advertisement-list.png
 	:alt: Product Listing
 
 Advance Search
 ^^^^^^^^^^^^^^^^
-.. figure:: ../Images/screenshots/advance-search.png
+.. figure:: ../Images/screenshots/advance-searchs.png
 	:alt: Advance Search
 
 Detail page of advertisement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: ../Images/screenshots/Detail-page.png
+.. figure:: ../Images/screenshots/advertise-detail.png
 	:alt: Detail Page
 
 My Products advertisement list
@@ -30,7 +30,7 @@ My Products advertisement list
 
 Create or Edit advertisements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: ../Images/screenshots/edit-or-create.png
+.. figure:: ../Images/screenshots/create-ad.png
 	:alt: Edit Advertisement
 
 Inquiry Form

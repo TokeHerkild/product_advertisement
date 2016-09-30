@@ -42,12 +42,30 @@ Otherwise your changes will be overwritten the next time you save the extension 
 						<div class="caption product-caption">
 							<f:if condition="{products.name}">
 								<f:link.action  action="show" arguments="{products : products}" pageUid="{detailPageId}">
-									<h3>{products.name}</h3>
+									<h3>
+										<f:format.crop maxCharacters="25">{products.name}</f:format.crop>
+									</h3>
 								</f:link.action>
 							</f:if>
 							
 							<f:if condition="{products.ownerplace}">
-								<p>{products.ownerplace}</p>
+								<p>
+									{products.ownerplace}<br/>
+									{f:translate(key:'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:crdate.posted-on')} : <f:format.date format="d/m/Y">{products.crdate}</f:format.date><br/>
+									<f:translate key="tx_productadvertisement_domain_model_products.price" /> : {products.price}
+								</p>
+							</f:if>
+							<f:if condition="{products.type}==1">
+								<f:then>
+									<span class="user-wants">
+										{f:translate(key:'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:product_registration.search')}
+									</span>
+								</f:then>
+								<f:else>
+									<span class="user-wants">
+										{f:translate(key:'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:product_registration.offer')}
+									</span>
+								</f:else>
 							</f:if>
 							<f:if condition="{products.category}">
 								<ul class="breadcrumb">

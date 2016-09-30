@@ -18,6 +18,7 @@ What does it do?
 - Detail information of the advertise
 - Differentiate the products by categories
 - Advance search
+- User can add estimated price for the product
 - Frontend users can show or hide their own advertisement
 - User wise advertisement listing
 - Custom sorting of advertisements

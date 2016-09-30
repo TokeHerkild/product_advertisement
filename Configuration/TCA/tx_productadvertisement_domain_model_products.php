@@ -19,14 +19,14 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'name,images,description,fromdate,todate,type,ownername,owneremail,ownerphone,ownerzip,ownerplace,status,approve,category,user,',
+		'searchFields' => 'name,images,description,fromdate,todate,price,type,ownername,owneremail,ownerphone,ownerzip,ownerplace,status,approve,category,user,',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('product_advertisement') . 'Resources/Public/Icons/tx_productadvertisement_domain_model_products.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, images, description, fromdate, todate, type, ownername, owneremail, ownerphone, ownerzip, ownerplace, status, approve, category, user',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, images, description, fromdate, todate, price, type, ownername, owneremail, ownerphone, ownerzip, ownerplace, status, approve, category, user',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, images, description, fromdate, todate, type, ownername, owneremail, ownerphone, ownerzip, ownerplace, status, approve, category, user, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, images, description, fromdate, todate, price, type, ownername, owneremail, ownerphone, ownerzip, ownerplace, status, approve, category, user, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -183,6 +183,21 @@ return array(
 				'eval' => 'trim'
 			)
 		),
+		'crdate' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.crdate',
+			'config' => array(
+				'type' => 'input',
+				'size' => 13,
+				'max' => 20,
+				'eval' => 'datetime',
+				'checkbox' => 0,
+				'default' => 0,
+				'range' => array(
+					'lower' => mktime(0, 0, 0, date('m'), date('d'), date('Y'))
+				),
+			),
+		),
 		'fromdate' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.fromdate',
@@ -205,6 +220,15 @@ return array(
 				'eval' => 'date',
 				'checkbox' => 0,
 				'default' => '0000-00-00'
+			),
+		),
+		'price' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.price',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			),
 		),
 		'type' => array(

@@ -30,6 +30,9 @@
 			<trans-unit id="tx_productadvertisement_domain_model_products.todate">
 				<source>Todate</source>
 			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.price">
+				<source>Price</source>
+			</trans-unit>
 			<trans-unit id="tx_productadvertisement_domain_model_products.type">
 				<source>Type</source>
 			</trans-unit>

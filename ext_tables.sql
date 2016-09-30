@@ -57,6 +57,7 @@ CREATE TABLE tx_productadvertisement_domain_model_products (
 	ownerphone varchar(255) DEFAULT '' NOT NULL,
 	ownerzip varchar(255) DEFAULT '' NOT NULL,
 	ownerplace varchar(255) DEFAULT '' NOT NULL,
+	price varchar(255) DEFAULT '' NOT NULL,
 	status tinyint(1) unsigned DEFAULT '0' NOT NULL,
 	approve tinyint(1) unsigned DEFAULT '0' NOT NULL,
 	category int(11) unsigned DEFAULT '0' NOT NULL,

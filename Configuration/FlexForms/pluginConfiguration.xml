@@ -30,7 +30,7 @@
 									</numIndex>
 									<numIndex index="3">
 										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.plugin_dropdown_search_action</numIndex>
-										<numIndex index="1">Products->search;Products->searchresult</numIndex>
+										<numIndex index="1">Products->search;Products->searchMeFirst</numIndex>
 									</numIndex>
 									<numIndex index="4">
 										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.plugin_dropdown_myproducts_action</numIndex>
@@ -53,7 +53,7 @@
                                 <OR>
                                 	<numIndex>FIELD:switchableControllerActions:=:Products->list</numIndex>
                                 	<OR>
-                                		<numIndex>FIELD:switchableControllerActions:=:Products->search;Products->searchresult</numIndex>
+                                		<numIndex>FIELD:switchableControllerActions:=:Products->search;Products->searchMeFirst</numIndex>
                                 		<OR>
 		                        			<numIndex>FIELD:switchableControllerActions:=:Products->userproducts;Products->delete;Products->hide;Products->showProduct</numIndex>
 		                        		</OR>
@@ -97,7 +97,7 @@
                                 <OR>
                                 	<numIndex>FIELD:switchableControllerActions:=:Products->list</numIndex>
                                 	<OR>
-                                		<numIndex>FIELD:switchableControllerActions:=:Products->search;Products->searchresult</numIndex>
+                                		<numIndex>FIELD:switchableControllerActions:=:Products->search;Products->searchMeFirst</numIndex>
                                 		<OR>
 		                        			<numIndex>FIELD:switchableControllerActions:=:Products->userproducts;Products->delete;Products->hide;Products->showProduct</numIndex>
 		                        		</OR>
@@ -133,7 +133,7 @@
                                 <OR>
                                 	<numIndex>FIELD:switchableControllerActions:=:Products->list</numIndex>
                                 	<OR>
-                                		<numIndex>FIELD:switchableControllerActions:=:Products->search;Products->searchresult</numIndex>
+                                		<numIndex>FIELD:switchableControllerActions:=:Products->search;Products->searchMeFirst</numIndex>
                                 	</OR>
                                 </OR>
                             </displayCond>
@@ -254,7 +254,7 @@
 								<OR>
                                 	<numIndex>FIELD:switchableControllerActions:=:Products->list</numIndex>
                                 	<OR>
-                                		<numIndex>FIELD:switchableControllerActions:=:Products->search;Products->searchresult</numIndex>
+                                		<numIndex>FIELD:switchableControllerActions:=:Products->search;Products->searchMeFirst</numIndex>
                                 		<OR>
 		                        			<numIndex>FIELD:switchableControllerActions:=:Products->userproducts;Products->delete;Products->hide;Products->showProduct</numIndex>
 		                        		</OR>

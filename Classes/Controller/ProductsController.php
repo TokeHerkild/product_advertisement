@@ -361,7 +361,45 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 		$this->redirectToUri($uri);
 	}
 
-
+	/**
+	 * Generate URL for Search
+	 *
+	 * @return void
+	 */
+	public function searchMeFirstAction()
+	{
+		$postArgs = $this->request->getArguments();
+		$searchParam = array();
+		if (!empty($postArgs['productName'])) {
+			$searchParam['productName'] = $postArgs['productName'];
+		}
+		if (!empty($postArgs['place'])) {
+			$searchParam['place'] = $postArgs['place'];
+		}
+		if (!empty($postArgs['category'])) {
+			$searchParam['category'] = $postArgs['category'];
+		}
+		if (!empty($postArgs['fromdate'])) {
+			$searchParam['fromdate'] = $postArgs['fromdate'];
+		}
+		if (!empty($postArgs['todate'])) {
+			$searchParam['todate'] = $postArgs['todate'];
+		}
+		if (!empty($postArgs['type'])) {
+			$searchParam['type'] = $postArgs['type'];
+		}
+		$uriBuilder = $this->controllerContext->getUriBuilder();
+		$uriBuilder->reset();
+		$uriBuilder->setArguments(array(
+			'tx_productadvertisement_search' => array(
+				'action' => 'search',
+				'controller' => 'Product',
+				'filter' => $searchParam
+			)
+		));
+		$uri = $uriBuilder->build();
+		$this->redirectToUri($uri);
+	}
 	/**
 	 * Advance search 
 	 *
@@ -369,10 +407,17 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 */
 	public function searchAction()
 	{
-		$postArgs = $this->request->getArguments();
+		$getArgs = array();
+		$setArgs = array();
+		if(GeneralUtility::_GET('tx_productadvertisement_search')){
+			$setArgs += GeneralUtility::_GET('tx_productadvertisement_search');
+			if($setArgs['filter']){
+				$getArgs = $setArgs['filter'];
+			}
+		}
 		$maxProducts = $this->settings['maxAdsPerPage'];
 		if (count($this->configureSorting()) > 0) {
-			$postArgs += $this->configureSorting();
+			$getArgs += $this->configureSorting();
 		}
 		// Pagination Cofiguration
 		if ($maxProducts != '') {
@@ -381,25 +426,31 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 			$paginateConfiguration = array('insertAbove' => 0, 'insertBelow' => 0);
 		}
 		$this->view->assign('configure', $paginateConfiguration);
+		
 		// Fetch Products
-		$products = $this->productsRepository->findProducts($postArgs);
+		$products = $this->productsRepository->findProducts($getArgs);
+		
 		// Fetch All Categories
 		$productCategory = $this->categoryRepository->findAll();
+
 		// Auto Fill Input Fields;
-		if (isset($postArgs['productName'])) {
-			$this->view->assign('productName', $postArgs['productName']);
+		if (isset($getArgs['productName'])) {
+			$this->view->assign('productName', $getArgs['productName']);
 		}
-		if (isset($postArgs['place'])) {
-			$this->view->assign('place', $postArgs['place']);
+		if (isset($getArgs['place'])) {
+			$this->view->assign('place', $getArgs['place']);
 		}
-		if (isset($postArgs['category'])) {
-			$this->view->assign('categoryUid', $postArgs['category']);
+		if (isset($getArgs['category'])) {
+			$this->view->assign('categoryUid', $getArgs['category']);
 		}
-		if (isset($postArgs['fromdate'])) {
-			$this->view->assign('fromdate', $postArgs['fromdate']);
+		if (!empty($getArgs['fromdate'])) {
+			$this->view->assign('fromdate', $getArgs['fromdate']);
 		}
-		if (!empty($postArgs['todate'])) {
-			$this->view->assign('todate', $postArgs['todate']);
+		if (!empty($getArgs['todate'])) {
+			$this->view->assign('todate', $getArgs['todate']);
+		}
+		if (!empty($getArgs['type'])) {
+			$this->view->assign('productType', $getArgs['type']);
 		}
 		$this->view->assign('product', $products);
 		$this->view->assign('categories', $productCategory);
@@ -489,14 +540,63 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 */
 
 	/**
+	 * Setting up URL for search
+	 * action searchFirst
+	 *
+	 * @return void
+	 */
+	public function searchFirstAction(){
+		$postArgs = $this->request->getArguments();
+		$searchParam = array();
+		if (!empty($postArgs['productName'])) {
+			$searchParam['productName'] = $postArgs['productName'];
+		}
+		if (!empty($postArgs['place'])) {
+			$searchParam['place'] = $postArgs['place'];
+		}
+		if (!empty($postArgs['category'])) {
+			$searchParam['category'] = $postArgs['category'];
+		}
+		if (!empty($postArgs['fromdate'])) {
+			$searchParam['fromdate'] = $postArgs['fromdate'];
+		}
+		if (!empty($postArgs['todate'])) {
+			$searchParam['todate'] = $postArgs['todate'];
+		}
+		if (isset($postArgs['approved'])) {
+			$searchParam['approved'] = $postArgs['approved'];
+		}
+		$uriBuilder = $this->controllerContext->getUriBuilder();
+		$uriBuilder->reset();
+		$uriBuilder->setArguments(array(
+			'tx_productadvertisement_searchBack' => array(
+				'action' => 'searchBack',
+				'controller' => 'Product',
+				'filter' => $searchParam
+			)
+		));
+		$uri = $uriBuilder->build();
+		$this->redirectToUri($uri);
+	}
+
+
+	/**
 	 * This action display all advertisements at backend module (Manage Products) and provide advance search option
 	 *
 	 * @return void
 	 */
 	public function searchBackAction()
 	{   
-		$postArgs = $this->request->getArguments();
-		$maxProducts = 20;
+		$getArgs = array();
+		
+		if(GeneralUtility::_GET('tx_productadvertisement_searchBack')){
+			$getParams = GeneralUtility::_GET('tx_productadvertisement_searchBack');
+			if($getParams['filter']){
+				$getArgs = $getParams['filter'];
+			}
+		}
+
+		$maxProducts = 10;
 		$paginateConfiguration = array('itemsPerPage' => $maxProducts, 'insertAbove' => 0, 'insertBelow' => 1);
 		$this->view->assign('configure', $paginateConfiguration);
 		// Get Categories
@@ -504,27 +604,27 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 		$this->view->assign('categories', $productCategory);
 
 		// Auto Fill Input Fields;
-		if (isset($postArgs['productName'])) {
-			$this->view->assign('productName', $postArgs['productName']);
+		if (isset($getArgs['productName'])) {
+			$this->view->assign('productName', $getArgs['productName']);
 		}
-		if (isset($postArgs['place'])) {
-			$this->view->assign('place', $postArgs['place']);
+		if (isset($getArgs['place'])) {
+			$this->view->assign('place', $getArgs['place']);
 		}
-		if (isset($postArgs['category'])) {
-			$this->view->assign('categoryUid', $postArgs['category']);
+		if (isset($getArgs['category'])) {
+			$this->view->assign('categoryUid', $getArgs['category']);
 		}
-		if (isset($postArgs['fromdate'])) {
-			$this->view->assign('fromdate', $postArgs['fromdate']);
+		if (isset($getArgs['fromdate'])) {
+			$this->view->assign('fromdate', $getArgs['fromdate']);
 		}
-		if (isset($postArgs['todate'])) {
-			$this->view->assign('todate', $postArgs['todate']);
+		if (isset($getArgs['todate'])) {
+			$this->view->assign('todate', $getArgs['todate']);
 		}
-		if (isset($postArgs['approved'])) {
-			$this->view->assign('approved', $postArgs['approved']);
+		if (isset($getArgs['approved'])) {
+			$this->view->assign('approved', $getArgs['approved']);
 		}
 
 		// Fetch Products
-		$products = $this->productsRepository->searchProducts($postArgs);
+		$products = $this->productsRepository->searchProducts($getArgs);
 		$this->view->assign('product', $products);
 	}
 
