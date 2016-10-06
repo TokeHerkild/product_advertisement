@@ -60,7 +60,7 @@ To add static template go to TypoScript Template menu and click on **'Edit Whole
 
 From **'Available Items'** find out **'product_advertisement(product_advertisement)'** template and add it to the template.
 
-the example has been shown in the below figure.
+the example has shown in the below figure.
 
 .. figure:: ../Images/extension-setup/add-static-template.png
    :alt: Add static template example

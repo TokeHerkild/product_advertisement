@@ -15,8 +15,8 @@ This chapter contains information for setup extension, from this chapter you wil
 
 Add first plugin Product List
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-First create storage folder for Product Advertisement, Now open Page Menu and click on **'Content'**. Go to **'Plugins'** tab and select **'General Plugin'**.
-Now go to **'Plguin'** and Select **'Products'** from Select Plugins Dropdown. then after select **'Product List'** from Select Plugin Function dropdown.
+First create storage folder for Product Advertisement, Now open Page Menu and click on **'Content.'** Go to **'Plugins'** tab and select **'General Plugin.'**
+Now go to **'Plugin'** and Select **'Products'** from Select Plugins Dropdown. Then after select **'Product List'** from Select Plugin Function dropdown.
 
 .. figure:: ../Images/extension-setup/add-general-plugin.png
     :alt: Add General Plugin
@@ -29,8 +29,8 @@ Now go to **'Plguin'** and Select **'Products'** from Select Plugins Dropdown. t
 Product List plugin inner configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-There are some configurations for product list plugin **'soring by field'**, **'sorting order'**, **'maximum products per page'**, to set sorting and pagination configuration.
-set **'Product Detail page id'** to display detail of product advertisement and set Storage Folder Id to **'Record Storage Page'**.
+There are some configurations for product list plugin **'soring by field,'** **'sorting order,'** **'maximum products per page,'** to set sorting and pagination configuration.
+Set **'Product Detail page id'** to display detail of product advertisement and set Storage Folder Id to **'Record Storage Page'**.
 
 .. figure:: ../Images/extension-setup/add-product-list-configuration.png
     :alt: Add product list configuration

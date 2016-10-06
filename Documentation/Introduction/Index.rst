@@ -5,8 +5,7 @@
 
 Introduction
 ============
-Product advertisement extension allow user to add small advertisement service to typo3 web application.
-In this extension less configuration of typoscript is required and it is easy to configure via user interface
+Product advertisement extension allows user to add small ad service to typo3 web application. In this extension, less configuration of TypoScript is required, and it is easy to configure via user interface
 
 
 
@@ -19,11 +18,11 @@ What does it do?
 - Differentiate the products by categories
 - Advance search
 - User can add estimated price for the product
-- Frontend users can show or hide their own advertisement
+- Frontend users can show or hide their advertisement
 - User wise advertisement listing
 - Custom sorting of advertisements
 - Pagination for the advertisement list
-- Frontend users are able to send inquiry for the particular products
-- Notify the advertiser as well as administrator via mail when advertisement is being created or edited.
-- Notify the advertiser when advertisement is approved / disapproved or deleted by administrator.
-- Backend module to manage advertisement and their categories.
+- Frontend users can send inquiry for the particular products
+- Notify the advertiser as well as administrator via mail when an advertisement is being created or edited.
+- Notify the advertiser when an advertisement is approved/disapproved or deleted by the administrator.
+- Backend module to manage advertisement and their categorie

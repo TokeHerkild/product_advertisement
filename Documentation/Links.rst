@@ -1,4 +1,3 @@
-
 .. include:: Includes.txt
 
 
@@ -13,5 +12,8 @@ Links
 :Bug Tracker:
 	https://forge.typo3.org/projects/extension-product_advertisement
 
-:Contact:
+:Web:
 	`DRC Systems PVT. LTD. <http://www.drcsystems.com/>`__
+
+:Mail us:
+	info@drcsystems.com
