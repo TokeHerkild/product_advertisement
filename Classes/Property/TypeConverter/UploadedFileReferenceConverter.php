@@ -169,7 +169,7 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter {
 			throw new TypeConverterException('Uploading files with PHP file extensions is not allowed!', 1399312430);
 		}
 
-		$allowedFileExtensions = $configuration->getConfigurationValue('Vendorname\\Advertisement\\Property\\TypeConverter\\UploadedFileReferenceConverter', self::CONFIGURATION_ALLOWED_FILE_EXTENSIONS);
+		$allowedFileExtensions = $configuration->getConfigurationValue('Drcsystems\\ProductAdvertisement\\Property\\TypeConverter\\UploadedFileReferenceConverter', self::CONFIGURATION_ALLOWED_FILE_EXTENSIONS);
 
 		if ($allowedFileExtensions !== NULL) {
 			$filePathInfo = PathUtility::pathinfo($uploadInfo['name']);
@@ -178,8 +178,8 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter {
 			}
 		}
 
-		$uploadFolderId = $configuration->getConfigurationValue('Vendorname\\Advertisement\\Property\\TypeConverter\\UploadedFileReferenceConverter', self::CONFIGURATION_UPLOAD_FOLDER) ?: $this->defaultUploadFolder;
-		$conflictMode = $configuration->getConfigurationValue('Vendorname\\Advertisement\\Property\\TypeConverter\\UploadedFileReferenceConverter', self::CONFIGURATION_UPLOAD_CONFLICT_MODE) ?: $this->defaultConflictMode;
+		$uploadFolderId = $configuration->getConfigurationValue('Drcsystems\\ProductAdvertisement\\Property\\TypeConverter\\UploadedFileReferenceConverter', self::CONFIGURATION_UPLOAD_FOLDER) ?: $this->defaultUploadFolder;
+		$conflictMode = $configuration->getConfigurationValue('Drcsystems\\ProductAdvertisement\\Property\\TypeConverter\\UploadedFileReferenceConverter', self::CONFIGURATION_UPLOAD_CONFLICT_MODE) ?: $this->defaultConflictMode;
 
 		$uploadFolder = $this->resourceFactory->retrieveFileOrFolderObject($uploadFolderId);
 		$uploadedFile =  $uploadFolder->addUploadedFile($uploadInfo, $conflictMode);
