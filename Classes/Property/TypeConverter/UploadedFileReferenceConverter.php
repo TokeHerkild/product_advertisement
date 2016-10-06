@@ -219,9 +219,7 @@ class UploadedFileReferenceConverter extends AbstractTypeConverter {
 	 */
 	protected function createFileReferenceFromFalFileReferenceObject(FalFileReference $falFileReference, $resourcePointer = NULL) {
 		if ($resourcePointer === NULL) {
-			/** @var $fileReference \Vendorname\Advertisement\Domain\Model\FileReference */
 			$fileReference = $this->objectManager->get('TYPO3\\CMS\\Extbase\\Domain\\Model\\FileReference');
-
 		} else {
 			$fileReference = $this->persistenceManager->getObjectByIdentifier($resourcePointer, 'TYPO3\\CMS\\Extbase\\Domain\\Model\\FileReference', FALSE);
 		}
