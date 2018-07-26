@@ -34,4 +34,9 @@ $EM_CONF[$_EXTKEY] = array(
 		'suggests' => array(
 		),
 	),
+    'autoload' => [
+        'psr-4' => [
+            'Drcsystems\\ProductAdvertisement\\' => 'Classes',
+        ],
+    ],
 );

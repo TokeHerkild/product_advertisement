@@ -19,3 +19,6 @@ if (!defined('TYPO3_MODE')) {
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerTypeConverter('Drcsystems\\ProductAdvertisement\\Property\\TypeConverter\\UploadedFileReferenceConverter');
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerTypeConverter('Drcsystems\\ProductAdvertisement\\Property\\TypeConverter\\ObjectStorageConverter');
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/realurl/class.tx_realurl_autoconfgen.php']['extensionConfiguration']['product_advertisement'] =
+    \Drcsystems\ProductAdvertisement\Hooks\RealurlAutoConf::class . '->extensionConfiguration';
