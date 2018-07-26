@@ -14,8 +14,6 @@ namespace Drcsystems\ProductAdvertisement\Hooks;
  * The TYPO3 project - inspiring people to share!
  */
 
-use TYPO3\CMS\Core\Utility\ArrayUtility;
-
 /**
  * Class RealurlAutoConf
  * @package Drcsystems\ProductAdvertisement\Hooks
@@ -61,6 +59,21 @@ class RealurlAutoConf
                             ],
 
                         ],
+                    ],
+                    'filter' => [
+                        [
+                            'GETvar' => 'tx_productadvertisement_search[filter][category]',
+                            'lookUpTable' => [
+                                'table' => 'tx_productadvertisement_domain_model_category',
+                                'id_field' => 'uid',
+                                'alias_field' => 'name',
+                                'useUniqueCache' => 1,
+                                'useUniqueCache_conf' => [
+                                    'strtolower' => 1,
+                                    'spaceCharacter' => '-',
+                                ],
+                            ],
+                        ]
                     ],
                 ],
             ],
