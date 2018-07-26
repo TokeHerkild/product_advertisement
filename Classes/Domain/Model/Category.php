@@ -14,6 +14,8 @@ namespace Drcsystems\ProductAdvertisement\Domain\Model;
  * The TYPO3 project - inspiring people to share!
  */
 
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
+
 /**
  * Category
  */
@@ -34,7 +36,22 @@ class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 */
 	protected $description = '';
 
-	/**
+    /**
+     * @var \Drcsystems\ProductAdvertisement\Domain\Model\Category
+     */
+	protected $parent;
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Drcsystems\ProductAdvertisement\Domain\Model\Category>
+     */
+	protected $subCategories;
+
+	public function __construct()
+    {
+        $this->subCategories = new ObjectStorage();
+    }
+
+    /**
 	 * Returns the name
 	 *
 	 * @return string $name
@@ -73,5 +90,45 @@ class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	{
 		$this->description = $description;
 	}
+
+    /**
+     * @return \Drcsystems\ProductAdvertisement\Domain\Model\Category
+     */
+    public function getParent()
+    {
+        return $this->parent;
+    }
+
+    /**
+     * @param \Drcsystems\ProductAdvertisement\Domain\Model\Category $parent
+     */
+    public function setParent($parent)
+    {
+        $this->parent = $parent;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getSubCategories()
+    {
+        return $this->subCategories;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $subCategories
+     */
+    public function setSubCategories($subCategories)
+    {
+        $this->subCategories = $subCategories;
+    }
+
+    /**
+     * @param \Drcsystems\ProductAdvertisement\Domain\Model\Category $category
+     */
+    public function addSubCategory(Category $category)
+    {
+        $this->subCategories->attach($category);
+    }
 
 }

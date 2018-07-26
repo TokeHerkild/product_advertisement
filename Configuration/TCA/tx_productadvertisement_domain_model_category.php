@@ -23,10 +23,10 @@ return array(
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('product_advertisement') . 'Resources/Public/Icons/tx_productadvertisement_domain_model_category.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, parent, sub_categories',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, description, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, description, parent, sub_categories, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -134,6 +134,26 @@ return array(
 				'eval' => 'trim'
 			),
 		),
-		
+        'parent' => [
+            'exclude' => 1,
+            'label' => 'Parent category',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tx_productadvertisement_domain_model_category',
+                'items' => [
+                    ['No parent', 0],
+                ]
+            ],
+        ],
+        'sub_categories' => [
+            'exclude' => 1,
+            'label' => 'Sub categories',
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_productadvertisement_domain_model_category',
+                'foreign_field' => 'parent'
+            ],
+        ],
 	),
 );
