@@ -167,7 +167,7 @@ return array(
 							--palette--;;filePalette'
 						)
 					),
-					'maxitems' => 10
+					'maxitems' => 8
 				),
 				$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 			),

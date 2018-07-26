@@ -15,6 +15,7 @@ namespace Drcsystems\ProductAdvertisement\Controller;
  * The TYPO3 project - inspiring people to share!
  */
 
+use Drcsystems\ProductAdvertisement\Domain\Model\Products;
 use Drcsystems\ProductAdvertisement\Property\TypeConverter\UploadedFileReferenceConverter;
 use TYPO3\CMS\Extbase\Property\PropertyMappingConfiguration;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -241,6 +242,7 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	public function editAction(\Drcsystems\ProductAdvertisement\Domain\Model\Products $products)
 	{
 		$this->view->assign('products', $products);
+		$this->view->assign('maxImages', $this->getImageRest(8, $products));
 		$productCategory = $this->categoryRepository->findAll();
 		$this->view->assign('categories', $productCategory);
 	}
@@ -811,7 +813,7 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 			UploadedFileReferenceConverter::CONFIGURATION_UPLOAD_FOLDER => '1:/user_upload/'
 		);
 		$newExampleConfiguration = $this->arguments[$argumentName]->getPropertyMappingConfiguration();
-		$newExampleConfiguration->forProperty('images.0')->setTypeConverterOptions('Drcsystems\\ProductAdvertisement\\Property\\TypeConverter\\UploadedFileReferenceConverter', $uploadConfiguration);
+		$newExampleConfiguration->forProperty('images.*')->setTypeConverterOptions('Drcsystems\\ProductAdvertisement\\Property\\TypeConverter\\UploadedFileReferenceConverter', $uploadConfiguration);
 	}
 
 
@@ -1000,4 +1002,20 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 		$subject = 'Inquiry for ' . $mailConfig['configure']['product'];
 		$this->sendMail($mailTo, $mailFrom, $subject, $template, $mailConfig);
 	}
+
+    /**
+     * @param $limit
+     * @param \Drcsystems\ProductAdvertisement\Domain\Model\Products $products
+     * @return array
+     */
+    public function getImageRest($limit, Products $products)
+    {
+        $res = [];
+        $missing = $limit - $products->getImages()->count();
+        for ($i=1;$i<=$missing;$i++) {
+            $index = $i+$products->getImages()->count() - 1;
+            $res[] = $index;
+        }
+        return $res;
+    }
 }
