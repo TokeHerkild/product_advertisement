@@ -40,6 +40,10 @@
 										<numIndex index="0">LLL:EXT:product_advertisement/Resources/Private/Language/locallang_be.xlf:flexform_module.plugin_dropdown_show_action</numIndex>
 										<numIndex index="1">Products->show;Products->inquiry;Products->sendMessage</numIndex>
 									</numIndex>
+									<numIndex index="6">
+										<numIndex index="0">QuickSearch</numIndex>
+										<numIndex index="1">Products->quickSearch</numIndex>
+									</numIndex>
 								</items>
 							</config>
 						</TCEforms>

@@ -135,7 +135,7 @@ class Products extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	/**
 	 * images
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Drcsystems\ProductAdvertisement\Domain\Model\FileReference>
 	 * @cascade remove
 	 */
 	protected $images = null;

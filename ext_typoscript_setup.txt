@@ -9,13 +9,22 @@ config.tx_extbase{
 					
           		}
             }
+            TYPO3\CMS\Extbase\Domain\Model\FileReference {
+                subclasses {
+                    Drcsystems\ProductAdvertisement\Domain\Model\FileReference = Drcsystems\ProductAdvertisement\Domain\Model\FileReference
+                }
+            }
             Drcsystems\ProductAdvertisement\Domain\Model\Users {
                 mapping {
                     tableName = fe_users
                     recordType = 0
                 }
             }
-            
+            Drcsystems\ProductAdvertisement\Domain\Model\FileReference {
+                mapping {
+                    tableName = sys_file_reference
+                }
+            }
     	}
     }
 }

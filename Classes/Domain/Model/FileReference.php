@@ -14,6 +14,8 @@ namespace Drcsystems\ProductAdvertisement\Domain\Model;
  * The TYPO3 project - inspiring people to share!
  */
 
+use TYPO3\CMS\Core\Resource\ResourceInterface;
+
 /**
  * Class FileReference
  */
@@ -33,13 +35,14 @@ class FileReference extends \TYPO3\CMS\Extbase\Domain\Model\FileReference {
 	 */
 	protected $uidLocal;
 
-	/**
-	 * @param \TYPO3\CMS\Core\Resource\FileReference $originalResource
-	 */
-	public function setOriginalResource(\TYPO3\CMS\Core\Resource\FileReference $originalResource) {
+    /**
+     * @param \TYPO3\CMS\Core\Resource\ResourceInterface $originalResource
+     */
+	public function setOriginalResource(ResourceInterface $originalResource) {
 		$this->originalResource = $originalResource;
 		$this->originalFileIdentifier = (int)$originalResource->getOriginalFile()->getUid();
 		$this->uidLocal = (int)$originalResource->getOriginalFile()->getUid();
+		parent::setOriginalResource($originalResource);
 	}
 
 	/**
@@ -83,4 +86,18 @@ class FileReference extends \TYPO3\CMS\Extbase\Domain\Model\FileReference {
 	{
 		$this->deleted = $deleted;
 	}
+
+    /**
+     * @return array
+     */
+	public function getProps()
+    {
+        $imgInfo = \getimagesize($this->getOriginalResource()->getPublicUrl());
+        return [
+            'width' => $imgInfo[0],
+            'height' => $imgInfo[1],
+            'html' => $imgInfo[3],
+            'mime' => $imgInfo['mime']
+        ];
+    }
 }

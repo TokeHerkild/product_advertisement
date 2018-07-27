@@ -46,4 +46,18 @@ class Users extends \TYPO3\CMS\Extbase\Domain\Model\FrontendUser
 	{
 		$this->username = $username;
 	}
+
+    /**
+     * @return string
+     */
+	public function getFullName()
+    {
+        if (!$this->name) {
+            $name = $this->getFirstName();
+            $name .= !empty($this->getMiddleName()) ? ' ' . $this->getMiddleName() : '';
+            $name .= !empty($this->getLastName()) ? ' ' . $this->getLastName() : '';
+            return $name;
+        }
+        return $this->name;
+    }
 }

@@ -187,11 +187,10 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	public function newAction()
 	{
 		// Fetch All Categories
-		$productCategory = $this->categoryRepository->findAll();
-        $productCategories = $this->categoryService->getCategoryList($productCategory);
+		$productCategory = $this->categoryRepository->findAllParents();
 		// Fetch user
         $user = $this->usersRepository->findByUid($this->userUid);
-		$this->view->assign('categories', $productCategories);
+		$this->view->assign('categories', $productCategory);
 		$this->view->assign('user', $user);
 	}
 
@@ -291,9 +290,12 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 */
 	public function editAction(\Drcsystems\ProductAdvertisement\Domain\Model\Products $products)
 	{
+	    $user = $this->usersRepository->findByUid($this->userUid);
+
+	    $this->view->assign('user', $user);
 		$this->view->assign('products', $products);
 		$this->view->assign('maxImages', $this->getImageRest(8, $products));
-		$productCategory = $this->categoryRepository->findAll();
+		$productCategory = $this->categoryRepository->findAllParents();
 		$this->view->assign('categories', $productCategory);
 	}
 
@@ -853,6 +855,14 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 		$this->redirect('newCategory');
 	}
 
+    /**
+     * quickSearch action
+     */
+	public function quickSearchAction()
+    {
+
+    }
+
 	/**
 	 * Arguments
 	 * @param mixed $argumentName 
@@ -1058,16 +1068,11 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     /**
      * @param $limit
      * @param \Drcsystems\ProductAdvertisement\Domain\Model\Products $products
-     * @return array
+     * @return int
      */
     public function getImageRest($limit, Products $products)
     {
-        $res = [];
         $missing = $limit - $products->getImages()->count();
-        for ($i=1;$i<=$missing;$i++) {
-            $index = $i+$products->getImages()->count() - 1;
-            $res[] = $index;
-        }
-        return $res;
+        return $missing;
     }
 }

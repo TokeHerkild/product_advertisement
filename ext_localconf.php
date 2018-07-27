@@ -7,7 +7,7 @@ if (!defined('TYPO3_MODE')) {
 	'Drcsystems.' . $_EXTKEY,
 	'Products',
 	array(
-		'Products' => 'list, show, new, search, searchMeFirst, hide, create, edit, update, delete, userproducts, inquiry, sendMessage',
+		'Products' => 'list, show, new, search, searchMeFirst, quickSearch, hide, create, edit, update, delete, userproducts, inquiry, sendMessage',
 		
 	),
 	// non-cacheable actions
