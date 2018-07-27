@@ -21,6 +21,7 @@ class CategoryService
 
     /**
      * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage|\TYPO3\CMS\Extbase\Persistence\Generic\QueryResult $categories
+     * @return array
      */
     public function getCategoryList($categories)
     {
@@ -32,14 +33,28 @@ class CategoryService
         return $this->parseCategories();
     }
 
-    public function parseCategories($categories = [], $list = [])
+    /**
+     * @param array $categories
+     * @param array $list
+     * @param string $preFix
+     * @return array
+     */
+    public function parseCategories($categories = [], $list = [], $preFix = '')
     {
         if (empty($categories)) {
             $categories = $this->categories;
         }
-        foreach ($categories as $key => $category) {
-
+        /** @var \Drcsystems\ProductAdvertisement\Domain\Model\Category $category */
+        foreach ($categories as $category) {
+            $list[] = [
+                'preFix' => $preFix,
+                'item' => $category,
+            ];
+            if ($category->hasSubCategories()) {
+                $list = $this->parseCategories($category->getSubCategories(), $list, $preFix . '-- ');
+            }
         }
+        return $list;
     }
 
 }

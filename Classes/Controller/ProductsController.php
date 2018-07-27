@@ -17,15 +17,19 @@ namespace Drcsystems\ProductAdvertisement\Controller;
 
 use Drcsystems\ProductAdvertisement\Domain\Model\Products;
 use Drcsystems\ProductAdvertisement\Property\TypeConverter\UploadedFileReferenceConverter;
-use TYPO3\CMS\Extbase\Property\PropertyMappingConfiguration;
+use Drcsystems\ProductAdvertisement\Service\CategoryService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * ProductsController
  */
 class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
+
+    /**
+     * @var int
+     */
+    protected $userUid;
 
 	/**
 	 * Repository object of products
@@ -50,6 +54,19 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 * @inject
 	 */
 	protected $usersRepository = NULL;
+
+    /**
+     * @var \Drcsystems\ProductAdvertisement\Service\CategoryService
+     */
+	protected $categoryService;
+
+    /**
+     * @param \Drcsystems\ProductAdvertisement\Service\CategoryService $categoryService
+     */
+	public function injectCategoryService(CategoryService $categoryService)
+    {
+        $this->categoryService = $categoryService;
+    }
 
 
 	/**
@@ -87,13 +104,15 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 		// Fetch Products
 		$products = $this->productsRepository->findProducts($sorting);
 		$this->view->assign('product', $products);
-	} 
+	}
 
-	/**
-	 * Check user Login
-	 *
-	 * @return void
-	 */
+    /**
+     * Check user Login
+     *
+     * @return void
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
+     */
 	public function initializeUserproductsAction(){
 		if (!isset($this->userUid)) {
 			$uri = $this->uriBuilder->reset()->setTargetPageUid($this->settings['listPageId'])->build();
@@ -169,9 +188,10 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	{
 		// Fetch All Categories
 		$productCategory = $this->categoryRepository->findAll();
+        $productCategories = $this->categoryService->getCategoryList($productCategory);
 		// Fetch user
         $user = $this->usersRepository->findByUid($this->userUid);
-		$this->view->assign('categories', $productCategory);
+		$this->view->assign('categories', $productCategories);
 		$this->view->assign('user', $user);
 	}
 
@@ -465,6 +485,7 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 		// Fetch All Categories
 		//$productCategory = $this->categoryRepository->findAll();
         $productCategory = $this->categoryRepository->findAllParents();
+        $productCategory = $this->categoryService->getCategoryList($productCategory);
 
 		// Auto Fill Input Fields;
 		if (isset($getArgs['productName'])) {
