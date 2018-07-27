@@ -20,4 +20,13 @@ namespace Drcsystems\ProductAdvertisement\Domain\Repository;
 class CategoryRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
 
+    public function findAllParents()
+    {
+        $query = $this->createQuery();
+
+        $query->matching($query->equals('parent', 0));
+
+        return $query->execute();
+    }
+
 }

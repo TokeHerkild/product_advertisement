@@ -169,7 +169,10 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	{
 		// Fetch All Categories
 		$productCategory = $this->categoryRepository->findAll();
+		// Fetch user
+        $user = $this->usersRepository->findByUid($this->userUid);
 		$this->view->assign('categories', $productCategory);
+		$this->view->assign('user', $user);
 	}
 
 	/**
@@ -202,7 +205,7 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 */
 	public function createAction(\Drcsystems\ProductAdvertisement\Domain\Model\Products $newProducts)
 	{            
-		if (isset($this->userUid)) {
+		if (isset($this->userUid) && !$newProducts->getUser()) {
 			$user = $this->usersRepository->findByUid($this->userUid);
 			$newProducts->setUser($user);
 			$newProducts->setStatus(1);
@@ -232,6 +235,33 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 			$uri = $uriBuilder->build();
 			$this->redirectToUri($uri);
 		}
+		if ($newProducts->getUser()) {
+            $this->productsRepository->add($newProducts);
+
+            // Send Mail To user Product Created Successfully
+            $mailConfig['configure'] = array(
+                'mailto'=>$newProducts->getUser()->getEmail(),
+                'mailFrom'=>$this->settings['emailAdmin'],
+                'username'=>$newProducts->getUser()->getUsername(),
+                'productName' => $newProducts->getName(),
+            );
+            $this->productCreateMail($mailConfig);
+
+            // Notify Admin Product Created
+            $adminMailConfig['configure'] = array(
+                'mailto'=>$this->settings['emailAdmin'],
+                'mailFrom'=>$this->settings['emailAdmin'],
+                'username'=>$newProducts->getUser()->getUsername(),
+                'productName' => $newProducts->getName(),
+            );
+            $this->notifyAdminProductCreate($adminMailConfig);
+
+            $uriBuilder = $this->controllerContext->getUriBuilder();
+            $this->uriBuilder->setCreateAbsoluteUri(true);
+            $this->uriBuilder->setTargetPageUid($this->settings['myListPageId']);
+            $uri = $uriBuilder->build();
+            $this->redirectToUri($uri);
+        }
 	}
 
 	/**
@@ -433,7 +463,8 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 		$products = $this->productsRepository->findProducts($getArgs);
 		
 		// Fetch All Categories
-		$productCategory = $this->categoryRepository->findAll();
+		//$productCategory = $this->categoryRepository->findAll();
+        $productCategory = $this->categoryRepository->findAllParents();
 
 		// Auto Fill Input Fields;
 		if (isset($getArgs['productName'])) {

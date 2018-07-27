@@ -131,4 +131,9 @@ class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->subCategories->attach($category);
     }
 
+    public function hasParent()
+    {
+        return (bool) $this->getParent();
+    }
+
 }
