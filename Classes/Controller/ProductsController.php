@@ -20,6 +20,7 @@ use Drcsystems\ProductAdvertisement\Domain\Model\Products;
 use Drcsystems\ProductAdvertisement\Property\TypeConverter\UploadedFileReferenceConverter;
 use Drcsystems\ProductAdvertisement\Service\CategoryService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * ProductsController
@@ -456,6 +457,9 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         if (!empty($postArgs['type'])) {
             $searchParam['type'] = $postArgs['type'];
         }
+        if (!empty($postArgs['zipcity'])) {
+            $searchParam['zipcity'] = $postArgs['zipcity'];
+        }
         $uriBuilder = $this->controllerContext->getUriBuilder();
         $uriBuilder->reset();
         $uriBuilder->setArguments(array(
@@ -526,6 +530,9 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         }
         if (!empty($getArgs['type'])) {
             $this->view->assign('productType', $getArgs['type']);
+        }
+        if (isset($getArgs['zipcity'])) {
+            $this->view->assign('zipcity', $getArgs['zipcity']);
         }
         $this->view->assign('product', $products);
         $this->view->assign('categories', $productCategory);

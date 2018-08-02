@@ -1,4 +1,5 @@
 <?php
+
 namespace Drcsystems\ProductAdvertisement\Hooks;
 
 /*
@@ -73,7 +74,7 @@ class RealurlAutoConf
                                     'spaceCharacter' => '-',
                                 ],
                             ],
-                        ]
+                        ],
                     ],
                 ],
             ],

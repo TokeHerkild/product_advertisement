@@ -54,6 +54,16 @@ class ProductsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 		if(!empty($productArgs['type'])){
 			array_push($queryCondition, $query->equals('type', $productArgs['type']));	
 		}
+		if (!empty($productArgs['zipcity'])) {
+		    $zipArgs = explode(' ', $productArgs['zipcity']);
+		    $zipcity = [
+		        $query->like('ownerzip', $productArgs['zipcity'])
+            ];
+		    foreach ($zipArgs as $key => $val) {
+		        $zipcity[] = $query->like('ownerzip', '%' . $val . '%');
+            }
+            array_push($queryCondition, $query->logicalOr($zipcity));
+        }
 		if (count($queryCondition) > 0) {
 			$query->matching($query->logicalAnd($queryCondition));
 		}
