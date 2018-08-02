@@ -262,6 +262,7 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
             $this->redirectToUri($uri);
         }
         if ($newProducts->getUser()) {
+            $newProducts->setApprove(1);
             $this->productsRepository->add($newProducts);
 
             // Send Mail To user Product Created Successfully
