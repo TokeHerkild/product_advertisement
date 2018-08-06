@@ -29,14 +29,14 @@ module.tx_productadvertisement_web_productadvertisementmodproducts {
 
 page = PAGE
 page.includeCSS{
-	bootstrapCss = EXT:product_advertisement/Resources/Public/css/bootstrap.min.css
+	#bootstrapCss = EXT:product_advertisement/Resources/Public/css/bootstrap.min.css
 	jqueryUi = EXT:product_advertisement/Resources/Public/css/jquery-ui.min.css
-	style = EXT:product_advertisement/Resources/Public/css/style.css
+	#style = EXT:product_advertisement/Resources/Public/css/style.css
 }
 page.includeJSFooter{
-	jquery = EXT:product_advertisement/Resources/Public/js/jquery-1.11.3.min.js
+	#jquery = EXT:product_advertisement/Resources/Public/js/jquery-1.11.3.min.js
 	jqueryUiJs = EXT:product_advertisement/Resources/Public/js/jquery-ui.js
-	bootstapJs = EXT:product_advertisement/Resources/Public/js/bootstrap.min.js
+	#bootstapJs = EXT:product_advertisement/Resources/Public/js/bootstrap.min.js
 	createProduct = EXT:product_advertisement/Resources/Public/js/product.js
 }
 

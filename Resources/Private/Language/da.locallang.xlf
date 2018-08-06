@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="da" datatype="plaintext" original="messages" date="2018-08-06T10:46:05Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+			<trans-unit id="products.ownerRegion" approved="yes">
+				<source><![CDATA[Owner region]]></source>
+				<target><![CDATA[Landsdel]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.0" approved="yes">
+				<source><![CDATA[Select region]]></source>
+				<target><![CDATA[Vælg landsdel]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.1" approved="yes">
+				<source><![CDATA[Bornholm]]></source>
+				<target><![CDATA[Bornholm]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.2" approved="yes">
+				<source><![CDATA[Fyn]]></source>
+				<target><![CDATA[Fyn]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.3" approved="yes">
+				<source><![CDATA[København og omegn]]></source>
+				<target><![CDATA[København og omegn]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.4" approved="yes">
+				<source><![CDATA[Midt- og Vestjylland]]></source>
+				<target><![CDATA[Midt- og Vestjylland]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.5" approved="yes">
+				<source><![CDATA[Nordjylland]]></source>
+				<target><![CDATA[Nordjylland]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.6" approved="yes">
+				<source><![CDATA[Sjælland]]></source>
+				<target><![CDATA[Sjælland]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.7" approved="yes">
+				<source><![CDATA[Syd- og Sønderjylland]]></source>
+				<target><![CDATA[Syd- og Sønderjylland]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.8" approved="yes">
+				<source><![CDATA[Sydsjælland og Lolland-Falster]]></source>
+				<target><![CDATA[Sydsjælland og Lolland-Falster]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.9" approved="yes">
+				<source><![CDATA[Østjylland]]></source>
+				<target><![CDATA[Østjylland]]></target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

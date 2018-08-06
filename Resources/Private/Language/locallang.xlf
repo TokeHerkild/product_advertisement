@@ -1,107 +1,108 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-09T18:43:17Z" product-name="product_advertisement">
-		<header/>
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-06T10:46:05Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
 		<body>
-			<trans-unit id="tx_productadvertisement_domain_model_category">
-				<source>Category</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_category.name">
-				<source>Name</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_category.description">
-				<source>Description</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products">
-				<source>Products</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.name">
-				<source>Name</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.images">
-				<source>Images</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.description">
-				<source>Description</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.fromdate">
-				<source>Fromdate</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.todate">
-				<source>Todate</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.price">
-				<source>Price</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.type">
-				<source>Type</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.ownername">
-				<source>Name</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.owneremail">
-				<source>Email</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.ownerphone">
-				<source>Contact</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.ownerzip">
-				<source>Zip</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.ownerplace">
-				<source>Place</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.status">
-				<source>Status</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.approve">
-				<source>Approve</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.category">
-				<source>Category</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.user">
-				<source>User</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_users">
-				<source>Users</source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.timeduration">
-				<source>Available From - To</source>
-			</trans-unit>
-			<!-- webto -->
 			<trans-unit id="products.ownerRegion">
-				<source>Owner region</source>
+				<source><![CDATA[Owner region]]></source>
 			</trans-unit>
 			<trans-unit id="products.ownerRegion.I.0">
-				<source>Select region</source>
+				<source><![CDATA[Select region]]></source>
 			</trans-unit>
 			<trans-unit id="products.ownerRegion.I.1">
-				<source>Bornholm</source>
+				<source><![CDATA[Bornholm]]></source>
 			</trans-unit>
 			<trans-unit id="products.ownerRegion.I.2">
-				<source>Fyn</source>
+				<source><![CDATA[Fyn]]></source>
 			</trans-unit>
 			<trans-unit id="products.ownerRegion.I.3">
-				<source>København og omegn</source>
+				<source><![CDATA[København og omegn]]></source>
 			</trans-unit>
 			<trans-unit id="products.ownerRegion.I.4">
-				<source>Midt- og Vestjylland</source>
+				<source><![CDATA[Midt- og Vestjylland]]></source>
 			</trans-unit>
 			<trans-unit id="products.ownerRegion.I.5">
-				<source>Nordjylland</source>
+				<source><![CDATA[Nordjylland]]></source>
 			</trans-unit>
 			<trans-unit id="products.ownerRegion.I.6">
-				<source>Sjælland</source>
+				<source><![CDATA[Sjælland]]></source>
 			</trans-unit>
 			<trans-unit id="products.ownerRegion.I.7">
-				<source>Syd- og Sønderjylland</source>
+				<source><![CDATA[Syd- og Sønderjylland]]></source>
 			</trans-unit>
 			<trans-unit id="products.ownerRegion.I.8">
-				<source>Sydsjælland og Lolland-Falster</source>
+				<source><![CDATA[Sydsjælland og Lolland-Falster]]></source>
 			</trans-unit>
 			<trans-unit id="products.ownerRegion.I.9">
-				<source>Østjylland</source>
+				<source><![CDATA[Østjylland]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_category">
+				<source><![CDATA[Category]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_category.description">
+				<source><![CDATA[Description]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_category.name">
+				<source><![CDATA[Name]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products">
+				<source><![CDATA[Products]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.approve">
+				<source><![CDATA[Approve]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.category">
+				<source><![CDATA[Category]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.description">
+				<source><![CDATA[Description]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.fromdate">
+				<source><![CDATA[Fromdate]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.images">
+				<source><![CDATA[Images]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.name">
+				<source><![CDATA[Name]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.owneremail">
+				<source><![CDATA[Email]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownername">
+				<source><![CDATA[Name]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerphone">
+				<source><![CDATA[Contact]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerplace">
+				<source><![CDATA[Place]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerzip">
+				<source><![CDATA[Zip]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.price">
+				<source><![CDATA[Price]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.status">
+				<source><![CDATA[Status]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.timeduration">
+				<source><![CDATA[Available From - To]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.todate">
+				<source><![CDATA[Todate]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.type">
+				<source><![CDATA[Type]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.user">
+				<source><![CDATA[User]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_users">
+				<source><![CDATA[Users]]></source>
 			</trans-unit>
 		</body>
 	</file>
