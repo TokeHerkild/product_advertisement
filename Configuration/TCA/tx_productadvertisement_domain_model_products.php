@@ -1,4 +1,6 @@
 <?php
+$yoastPrefix = 'LLL:EXT:' . 'yoast_seo/Resources/Private/Language/BackendModule.xlf:';
+
 return array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products',
@@ -26,7 +28,13 @@ return array(
 		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, images, description, fromdate, todate, price, type, ownername, owneremail, ownerphone, ownerzip, ownerplace, status, approve, category, user',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, images, description, fromdate, todate, price, type, ownername, owneremail, ownerphone, ownerzip, ownerplace, status, approve, category, user, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => [
+		    'showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, images,'
+                        . 'description, fromdate, todate, price, type, ownername, owneremail, ownerphone, ownerzip,'
+                        . 'ownerplace, status, approve, category, user,'
+                        . '--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime,'
+                        . '--div--;Yoast SEO, tx_yoastseo_focuskeyword, tx_yoastseo_snippetpreview, tx_yoastseo_readability_analysis'
+        ],
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -360,6 +368,33 @@ return array(
 				'maxitems' => 1,
 			),
 		),
-		
+		'tx_yoastseo_snippetpreview' => [
+		    'label' => $yoastPrefix . 'snippetPreview',
+            'exclude' => true,
+            //'displayCond' => 'REC:NEW:false',
+            'config' => [
+                'type' => 'text',
+                'renderType' => 'snippetPreview',
+                'settings' => [
+                    'titleField' => 'name',
+                    'descriptionField' => 'description'
+                ],
+            ]
+        ],
+        'tx_yoastseo_readability_analysis' => [
+            'label' => $yoastPrefix . 'analysis',
+            'exclude' => true,
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'readabilityAnalysis',
+            ]
+        ],
+        'tx_yoastseo_focuskeyword' => [
+            'label' => $yoastPrefix . 'seoFocusKeyword',
+            'exclude' => true,
+            'config' => [
+                'type' => 'input',
+            ],
+        ]
 	),
 );

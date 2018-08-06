@@ -65,6 +65,8 @@ CREATE TABLE tx_productadvertisement_domain_model_products (
 	category int(11) unsigned DEFAULT '0' NOT NULL,
 	user int(11) unsigned DEFAULT '0',
 
+	tx_yoastseo_focuskeyword text NOT NULL,
+
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
 	cruser_id int(11) unsigned DEFAULT '0' NOT NULL,
