@@ -48,7 +48,7 @@ class ProductsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 		}
 		if (!empty($productArgs['category'])) {
 		    if ($productArgs['category'] instanceof Category) {
-		        $conditions = $this->getRecusiveCategories($productArgs['Category'], $query);
+		        $conditions = $this->getRecusiveCategories($productArgs['category'], $query);
 		        \array_push($queryCondition, $query->logicalOr($conditions));
             } else {
                 array_push($queryCondition, $query->contains('category', $productArgs['category']));
@@ -164,7 +164,7 @@ class ProductsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             $subs = $category->getSubCategories();
             $subs->rewind();
             while ($subs->valid()) {
-                $this->getRecusiveCategories($subs->current(), $query, $conditions);
+                $conditions = $this->getRecusiveCategories($subs->current(), $query, $conditions);
                 $subs->next();
             }
         }
