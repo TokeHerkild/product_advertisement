@@ -476,6 +476,9 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         if (!empty($postArgs['zipcity'])) {
             $searchParam['zipcity'] = $postArgs['zipcity'];
         }
+        if (!empty($postArgs['ownerRegion'])) {
+            $searchParam['ownerRegion'] = $postArgs['ownerRegion'];
+        }
         $uriBuilder = $this->controllerContext->getUriBuilder();
         $uriBuilder->reset();
         $uriBuilder->setArguments(array(
@@ -550,6 +553,9 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         }
         if (isset($getArgs['zipcity'])) {
             $this->view->assign('zipcity', $getArgs['zipcity']);
+        }
+        if (isset($getArgs['ownerRegion'])) {
+            $this->view->assign('ownerRegion', $getArgs['ownerRegion']);
         }
         $this->view->assign('product', $products);
         $this->view->assign('categories', $productCategory);

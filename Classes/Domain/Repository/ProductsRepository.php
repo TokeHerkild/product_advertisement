@@ -64,6 +64,9 @@ class ProductsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             }
             array_push($queryCondition, $query->logicalOr($zipcity));
         }
+        if (!empty($productArgs['ownerRegion'])) {
+            \array_push($queryCondition, $query->equals('ownerRegion', $productArgs['ownerRegion']));
+        }
 		if (count($queryCondition) > 0) {
 			$query->matching($query->logicalAnd($queryCondition));
 		}
