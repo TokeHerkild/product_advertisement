@@ -13,6 +13,10 @@ namespace Drcsystems\ProductAdvertisement\Domain\Repository;
  * The TYPO3 project - inspiring people to share!
  */
 
+use Drcsystems\ProductAdvertisement\Domain\Model\Category;
+use TYPO3\CMS\Extbase\Persistence\Generic\Query;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
+
 /**
  * The repository for Products
  */
@@ -43,7 +47,12 @@ class ProductsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 			array_push($queryCondition, $query->like('ownerplace', '%' . $productArgs['place'] . '%'));
 		}
 		if (!empty($productArgs['category'])) {
-			array_push($queryCondition, $query->contains('category', $productArgs['category']));
+		    if ($productArgs['category'] instanceof Category) {
+		        $conditions = $this->getRecusiveCategories($productArgs['Category'], $query);
+		        \array_push($queryCondition, $query->logicalOr($conditions));
+            } else {
+                array_push($queryCondition, $query->contains('category', $productArgs['category']));
+            }
 		}
 		if(!empty($productArgs['fromdate'])){
 			array_push($queryCondition, $query->greaterThanOrEqual('fromdate', $productArgs['fromdate']));   
@@ -124,7 +133,12 @@ class ProductsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 			array_push($queryCondition, $query->like('ownerplace', '%' . $searchArgs['place'] . '%'));
 		}
 		if (!empty($searchArgs['category'])) {
-			array_push($queryCondition, $query->contains('category', $searchArgs['category']));
+		    if ($searchArgs['category'] instanceof Category) {
+		        $conditions = $this->getRecusiveCategories($searchArgs['category'], $query);
+		        \array_push($queryCondition, $query->logicalOr($conditions));
+            } else {
+                array_push($queryCondition, $query->contains('category', $searchArgs['category']));
+            }
 		}
 		if(!empty($searchArgs['fromdate'])){
 			array_push($queryCondition, $query->greaterThanOrEqual('fromdate', $searchArgs['fromdate']));   
@@ -142,5 +156,19 @@ class ProductsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 			return $query->execute();
 		}
 	}
+
+    public function getRecusiveCategories(Category $category, QueryInterface $query, array $conditions = [])
+    {
+        $conditions[] = $query->contains('category', $category);
+        if ($category->hasSubCategories()) {
+            $subs = $category->getSubCategories();
+            $subs->rewind();
+            while ($subs->valid()) {
+                $this->getRecusiveCategories($subs->current(), $query, $conditions);
+                $subs->next();
+            }
+        }
+        return $conditions;
+    }
 
 }

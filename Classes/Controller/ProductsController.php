@@ -16,6 +16,7 @@ namespace Drcsystems\ProductAdvertisement\Controller;
  * The TYPO3 project - inspiring people to share!
  */
 
+use Drcsystems\ProductAdvertisement\Domain\Model\Category;
 use Drcsystems\ProductAdvertisement\Domain\Model\Products;
 use Drcsystems\ProductAdvertisement\Property\TypeConverter\UploadedFileReferenceConverter;
 use Drcsystems\ProductAdvertisement\Service\CategoryService;
@@ -524,6 +525,9 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
             $getArgs['fieldname'] = $this->settings['sortField'];
             $getArgs['order'] = $this->settings['sortDirection'];
         }
+        if (isset($getArgs['category'])) {
+            $getArgs['category'] = $this->categoryRepository->findByUid($getArgs['category']);
+        }
         $products = $this->productsRepository->findProducts($getArgs);
 
         // Fetch All Categories
@@ -540,7 +544,11 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
             $this->view->assign('place', $getArgs['place']);
         }
         if (isset($getArgs['category'])) {
-            $this->view->assign('categoryUid', $getArgs['category']);
+            if ($getArgs['category'] instanceof Category) {
+                $this->view->assign('categoryUid', $getArgs['category']->getUid());
+            } else {
+                $this->view->assign('categoryUid', $getArgs['category']);
+            }
         }
         if (!empty($getArgs['fromdate'])) {
             $this->view->assign('fromdate', $getArgs['fromdate']);
