@@ -14,6 +14,8 @@ namespace Drcsystems\ProductAdvertisement\Domain\Model;
  * The TYPO3 project - inspiring people to share!
  */
 
+use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
+
 /**
  * Products
  */
@@ -103,6 +105,11 @@ class Products extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * @var string
 	 */
 	protected $ownerplace = '';
+
+    /**
+     * @var int
+     */
+	protected $ownerRegion = 0;
 
 	/**
 	 * status
@@ -583,5 +590,31 @@ class Products extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	{
 		$this->images = $images;
 	}
+
+    /**
+     * @return int
+     */
+    public function getOwnerRegion()
+    {
+        return $this->ownerRegion;
+    }
+
+    /**
+     * @param int $ownerRegion
+     */
+    public function setOwnerRegion($ownerRegion)
+    {
+        $this->ownerRegion = $ownerRegion;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOwnerRegionString()
+    {
+        $result = LocalizationUtility::translate('products.ownerRegion.I.' . $this->ownerRegion, 'ProductAdvertisement');
+        $result = !empty($result) ? $result : (string) $this->ownerRegion;
+        return $result;
+    }
 
 }

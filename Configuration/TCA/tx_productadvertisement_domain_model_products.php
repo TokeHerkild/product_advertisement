@@ -1,5 +1,6 @@
 <?php
 $yoastPrefix = 'LLL:EXT:' . 'yoast_seo/Resources/Private/Language/BackendModule.xlf:';
+$lllPath = 'LLL:EXT:' . 'product_advertisement/Resources/Private/Language/locallang_db.xlf:';
 
 return array(
 	'ctrl' => array(
@@ -141,7 +142,7 @@ return array(
 				'images',
 				array(
 					'appearance' => array(
-						'createNewRelationLinkTitle' => 'LLL:EXT:cms/locallang_ttc.xlf:images.addFileReference'
+						'createNewRelationLinkTitle' => 'LLL:EXT:' . 'cms/locallang_ttc.xlf:images.addFileReference'
 					),
 					'foreign_types' => array(
 						'0' => array(
@@ -193,7 +194,7 @@ return array(
 		),
 		'crdate' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.crdate',
+			'label' => $lllPath . 'tx_productadvertisement_domain_model_products.crdate',
 			'config' => array(
 				'type' => 'input',
 				'size' => 13,
@@ -300,6 +301,27 @@ return array(
 				'eval' => 'trim'
 			),
 		),
+		'owner_region' => [
+		    'exclude' => 1,
+            'label' => $lllPath . 'products.ownerRegion',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [$lllPath . 'products.ownerRegion.I.0', 0],
+                    [$lllPath . 'products.ownerRegion.I.1', 1],
+                    [$lllPath . 'products.ownerRegion.I.2', 2],
+                    [$lllPath . 'products.ownerRegion.I.3', 3],
+                    [$lllPath . 'products.ownerRegion.I.4', 4],
+                    [$lllPath . 'products.ownerRegion.I.5', 5],
+                    [$lllPath . 'products.ownerRegion.I.6', 6],
+                    [$lllPath . 'products.ownerRegion.I.7', 7],
+                    [$lllPath . 'products.ownerRegion.I.8', 8],
+                    [$lllPath . 'products.ownerRegion.I.9', 9],
+                ],
+                'default' => 0,
+            ],
+        ],
 		'status' => array(
 			'exclude' => 1,
 			'label' => 'LLL:EXT:product_advertisement/Resources/Private/Language/locallang_db.xlf:tx_productadvertisement_domain_model_products.status',

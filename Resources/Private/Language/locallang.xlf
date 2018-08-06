@@ -69,6 +69,40 @@
 			<trans-unit id="tx_productadvertisement_domain_model_products.timeduration">
 				<source>Available From - To</source>
 			</trans-unit>
+			<!-- webto -->
+			<trans-unit id="products.ownerRegion">
+				<source>Owner region</source>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.0">
+				<source>Select region</source>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.1">
+				<source>Bornholm</source>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.2">
+				<source>Fyn</source>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.3">
+				<source>København og omegn</source>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.4">
+				<source>Midt- og Vestjylland</source>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.5">
+				<source>Nordjylland</source>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.6">
+				<source>Sjælland</source>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.7">
+				<source>Syd- og Sønderjylland</source>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.8">
+				<source>Sydsjælland og Lolland-Falster</source>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.9">
+				<source>Østjylland</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
