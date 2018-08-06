@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="da" datatype="plaintext" original="messages" date="2018-08-06T10:55:25Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+			<trans-unit id="active_product_description_start" approved="yes">
+				<source><![CDATA[Your advertisement]]></source>
+				<target><![CDATA[Din annonce]]></target>
+			</trans-unit>
+			<trans-unit id="admin_prefix" approved="yes">
+				<source><![CDATA[Dear Admin,]]></source>
+				<target><![CDATA[Kære admin,]]></target>
+			</trans-unit>
+			<trans-unit id="category_addnew" approved="yes">
+				<source><![CDATA[Add New Category]]></source>
+				<target><![CDATA[Tilføj ny kategori]]></target>
+			</trans-unit>
+			<trans-unit id="category_edit" approved="yes">
+				<source><![CDATA[Edit Category]]></source>
+				<target><![CDATA[Ret kategori]]></target>
+			</trans-unit>
+			<trans-unit id="category_uid" approved="yes" xml:space="preserve">
+				<source><![CDATA[Category Uid]]></source>
+				<target><![CDATA[Kategori id
+]]></target>
+			</trans-unit>
+			<trans-unit id="check_out_msg" approved="yes">
+				<source><![CDATA[Please check it out.]]></source>
+				<target><![CDATA[Kig venligst]]></target>
+			</trans-unit>
+			<trans-unit id="crdate.posted-on" approved="yes">
+				<source><![CDATA[Posten on]]></source>
+				<target><![CDATA[Oprettet den]]></target>
+			</trans-unit>
+			<trans-unit id="create_new" approved="yes">
+				<source><![CDATA[Create New]]></source>
+				<target><![CDATA[Opret ny annonce]]></target>
+			</trans-unit>
+			<trans-unit id="create_new_product.title" approved="yes">
+				<source><![CDATA[Create New Advertisement]]></source>
+				<target><![CDATA[Opret ny annonce]]></target>
+			</trans-unit>
+			<trans-unit id="detail_page.name" approved="yes">
+				<source><![CDATA[Product Details]]></source>
+				<target><![CDATA[Annonce detaljer]]></target>
+			</trans-unit>
+			<trans-unit id="disapproved_by" approved="yes">
+				<source><![CDATA[has disapproved by admin.]]></source>
+				<target><![CDATA[er blevet afvist af en admin.]]></target>
+			</trans-unit>
+			<trans-unit id="edit_page.name" approved="yes">
+				<source><![CDATA[Edit Products]]></source>
+				<target><![CDATA[Ret annonce]]></target>
+			</trans-unit>
+			<trans-unit id="edit_product_title" approved="yes">
+				<source><![CDATA[Save]]></source>
+				<target><![CDATA[Gem]]></target>
+			</trans-unit>
+			<trans-unit id="email_footer" approved="yes">
+				<source><![CDATA[Have a Great Day..!]]></source>
+				<target><![CDATA[God dag.]]></target>
+			</trans-unit>
+			<trans-unit id="email_header" approved="yes">
+				<source><![CDATA[Notification for you..!]]></source>
+				<target><![CDATA[Ny notifikation]]></target>
+			</trans-unit>
+			<trans-unit id="fe_users.tx_extbase_type.Tx_ProductAdvertisement_Users" approved="yes">
+				<source><![CDATA[Products Advertisement Users]]></source>
+				<target><![CDATA[Annonce brugere]]></target>
+			</trans-unit>
+			<trans-unit id="get_print_btn" approved="yes">
+				<source><![CDATA[Get Print]]></source>
+				<target><![CDATA[Print]]></target>
+			</trans-unit>
+			<trans-unit id="has_approve_msg" approved="yes">
+				<source><![CDATA[has been approved by admin.]]></source>
+				<target><![CDATA[er blevet godkendt af en admin.]]></target>
+			</trans-unit>
+			<trans-unit id="has_register" approved="yes">
+				<source><![CDATA[has registered a advertisement named]]></source>
+				<target><![CDATA[har registreret en annonce navngivet]]></target>
+			</trans-unit>
+			<trans-unit id="has_updated" approved="yes">
+				<source><![CDATA[has been updated successfully.]]></source>
+				<target><![CDATA[er blevet opdateret korrekt]]></target>
+			</trans-unit>
+			<trans-unit id="inquiry_form" approved="yes">
+				<source><![CDATA[Inquiry Form]]></source>
+				<target><![CDATA[Kontakt formular]]></target>
+			</trans-unit>
+			<trans-unit id="inquiry_send_user_start" approved="yes">
+				<source><![CDATA[There is an inquiry for your product's advertisement]]></source>
+				<target><![CDATA[Der er en henvendelse på din annonce.]]></target>
+			</trans-unit>
+			<trans-unit id="inquiry_start_msg" approved="yes">
+				<source><![CDATA[Your inquiry for advertisement]]></source>
+				<target><![CDATA[Din henvendelse på annoncen]]></target>
+			</trans-unit>
+			<trans-unit id="inquiry_thanks_extra_part" approved="yes">
+				<source><![CDATA[has been registered, Thank you for choosing us.]]></source>
+				<target><![CDATA[er blevet registret. Tak for at vælge Racingsalg.dk]]></target>
+			</trans-unit>
+			<trans-unit id="inquiry_user_email" approved="yes">
+				<source><![CDATA[Email]]></source>
+				<target><![CDATA[Email]]></target>
+			</trans-unit>
+			<trans-unit id="inquiry_user_msg" approved="yes">
+				<source><![CDATA[Message]]></source>
+				<target><![CDATA[Besked]]></target>
+			</trans-unit>
+			<trans-unit id="inquiry_user_name" approved="yes">
+				<source><![CDATA[Name]]></source>
+				<target><![CDATA[Navn]]></target>
+			</trans-unit>
+			<trans-unit id="inquiry_user_phone" approved="yes">
+				<source><![CDATA[Contact No]]></source>
+				<target><![CDATA[Kontakt nummer]]></target>
+			</trans-unit>
+			<trans-unit id="mail_start_prefix" approved="yes">
+				<source><![CDATA[Dear]]></source>
+				<target><![CDATA[Kære]]></target>
+			</trans-unit>
+			<trans-unit id="mail_user" approved="yes">
+				<source><![CDATA[User]]></source>
+				<target><![CDATA[Bruger]]></target>
+			</trans-unit>
+			<trans-unit id="manage.categorises" approved="yes">
+				<source><![CDATA[Manage Categories]]></source>
+				<target><![CDATA[Administrer kategorier]]></target>
+			</trans-unit>
+			<trans-unit id="manage.products" approved="yes">
+				<source><![CDATA[Manage Products]]></source>
+				<target><![CDATA[Administrer annoncer]]></target>
+			</trans-unit>
+			<trans-unit id="notify_once" approved="yes">
+				<source><![CDATA[We will notify you once Admin Approve It.]]></source>
+				<target><![CDATA[Du vil modtage en notifikation når admin godkender den.]]></target>
+			</trans-unit>
+			<trans-unit id="owner_info" approved="yes">
+				<source><![CDATA[Owner Information]]></source>
+				<target><![CDATA[Annonce information]]></target>
+			</trans-unit>
+			<trans-unit id="product_list_title" approved="yes">
+				<source><![CDATA[Products]]></source>
+				<target><![CDATA[Annonce]]></target>
+			</trans-unit>
+			<trans-unit id="product_registration.approveList" approved="yes">
+				<source><![CDATA[Approve / Disapprove]]></source>
+				<target><![CDATA[Afvis]]></target>
+			</trans-unit>
+			<trans-unit id="product_registration.approvestatus" approved="yes">
+				<source><![CDATA[Approve Status]]></source>
+				<target><![CDATA[Godkend]]></target>
+			</trans-unit>
+			<trans-unit id="product_registration.offer" approved="yes">
+				<source><![CDATA[Wants to sale]]></source>
+				<target><![CDATA[Sælges]]></target>
+			</trans-unit>
+			<trans-unit id="product_registration.search" approved="yes">
+				<source><![CDATA[Wants to purchase]]></source>
+				<target><![CDATA[Købes]]></target>
+			</trans-unit>
+			<trans-unit id="product_registration.typeLable" approved="yes">
+				<source><![CDATA[-- Select Product Type --]]></source>
+				<target><![CDATA[-- Vælg annonce type --]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion" approved="yes">
+				<source><![CDATA[Owner region]]></source>
+				<target><![CDATA[Landsdel]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.0" approved="yes">
+				<source><![CDATA[Select region]]></source>
+				<target><![CDATA[Vælg landsdel]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.1" approved="yes">
+				<source><![CDATA[Bornholm]]></source>
+				<target><![CDATA[Bornholm]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.2" approved="yes">
+				<source><![CDATA[Fyn]]></source>
+				<target><![CDATA[Fyn]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.3" approved="yes">
+				<source><![CDATA[København og omegn]]></source>
+				<target><![CDATA[København og omegn]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.4" approved="yes">
+				<source><![CDATA[Midt- og Vestjylland]]></source>
+				<target><![CDATA[Midt- og Vestjylland]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.5" approved="yes">
+				<source><![CDATA[Nordjylland]]></source>
+				<target><![CDATA[Nordjylland]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.6" approved="yes">
+				<source><![CDATA[Sjælland]]></source>
+				<target><![CDATA[Sjælland]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.7" approved="yes">
+				<source><![CDATA[Syd- og Sønderjylland]]></source>
+				<target><![CDATA[Syd- og Sønderjylland]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.8" approved="yes">
+				<source><![CDATA[Sydsjælland og Lolland-Falster]]></source>
+				<target><![CDATA[Sydsjælland og Lolland-Falster]]></target>
+			</trans-unit>
+			<trans-unit id="products.ownerRegion.I.9" approved="yes">
+				<source><![CDATA[Østjylland]]></source>
+				<target><![CDATA[Østjylland]]></target>
+			</trans-unit>
+			<trans-unit id="save_data" approved="yes">
+				<source><![CDATA[Save]]></source>
+				<target><![CDATA[Gem]]></target>
+			</trans-unit>
+			<trans-unit id="search_form.title" approved="yes">
+				<source><![CDATA[Search]]></source>
+				<target><![CDATA[Søg]]></target>
+			</trans-unit>
+			<trans-unit id="searchfield.category" approved="yes">
+				<source><![CDATA[Product Category]]></source>
+				<target><![CDATA[Annonce kategori]]></target>
+			</trans-unit>
+			<trans-unit id="searchfield.default_category" approved="yes">
+				<source><![CDATA[Select Category]]></source>
+				<target><![CDATA[Vælg kategori]]></target>
+			</trans-unit>
+			<trans-unit id="searchfield.name" approved="yes">
+				<source><![CDATA[Product Name]]></source>
+				<target><![CDATA[Annonce navn]]></target>
+			</trans-unit>
+			<trans-unit id="searchfield.place" approved="yes">
+				<source><![CDATA[Product Place]]></source>
+				<target><![CDATA[Annonce region]]></target>
+			</trans-unit>
+			<trans-unit id="searchpage.no_product_found" approved="yes">
+				<source><![CDATA[Der blev ikke fundet nogle annoncer.]]></source>
+				<target><![CDATA[Der blev ikke fundet nogle annoncer.]]></target>
+			</trans-unit>
+			<trans-unit id="send_message_btn" approved="yes">
+				<source><![CDATA[Send Message]]></source>
+				<target><![CDATA[Send besked]]></target>
+			</trans-unit>
+			<trans-unit id="send_now" approved="yes">
+				<source><![CDATA[Send Now]]></source>
+				<target><![CDATA[Send nu]]></target>
+			</trans-unit>
+			<trans-unit id="thank_you_msg" approved="yes">
+				<source><![CDATA[Thank You for registering advertisement]]></source>
+				<target><![CDATA[Tak for din annonce.]]></target>
+			</trans-unit>
+			<trans-unit id="thank_you_msg_extra" approved="yes">
+				<source><![CDATA[Your advertisement has been registered successfully, We will notify you once admin approve it.]]></source>
+				<target><![CDATA[Din annonce er blevet oprettet korrekt, du vil blive underrettet når en admin godkender den.]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_category" approved="yes">
+				<source><![CDATA[Category]]></source>
+				<target><![CDATA[Kategori]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_category.description" approved="yes">
+				<source><![CDATA[Description]]></source>
+				<target><![CDATA[Beskrivelse]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_category.name" approved="yes">
+				<source><![CDATA[Name]]></source>
+				<target><![CDATA[Navn]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products" approved="yes">
+				<source><![CDATA[Products]]></source>
+				<target><![CDATA[Annoncer]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.approve" approved="yes">
+				<source><![CDATA[Approve]]></source>
+				<target><![CDATA[Godkend]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.category" approved="yes">
+				<source><![CDATA[Category]]></source>
+				<target><![CDATA[Kategori]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.delete" approved="yes">
+				<source><![CDATA[Delete]]></source>
+				<target><![CDATA[Slet]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.description" approved="yes">
+				<source><![CDATA[Description]]></source>
+				<target><![CDATA[Beskrivelse]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.disapprove" approved="yes">
+				<source><![CDATA[Disapprove]]></source>
+				<target><![CDATA[Afvis]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.edit" approved="yes">
+				<source><![CDATA[Edit]]></source>
+				<target><![CDATA[Ret]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.fromdate" approved="yes">
+				<source><![CDATA[Fromdate]]></source>
+				<target><![CDATA[Fra dato]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.images" approved="yes">
+				<source><![CDATA[Images]]></source>
+				<target><![CDATA[Billeder]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.name" approved="yes">
+				<source><![CDATA[Product Name]]></source>
+				<target><![CDATA[Annonce navn]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.owneremail" approved="yes">
+				<source><![CDATA[Owner Email]]></source>
+				<target><![CDATA[Din e-mail adresse]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownername" approved="yes">
+				<source><![CDATA[Owner Name]]></source>
+				<target><![CDATA[Dit fulde navn]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerphone" approved="yes">
+				<source><![CDATA[Owner Contact]]></source>
+				<target><![CDATA[Din e-mail adresse]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerplace" approved="yes">
+				<source><![CDATA[Owner Place]]></source>
+				<target><![CDATA[Region]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerzip" approved="yes">
+				<source><![CDATA[Owner Zip]]></source>
+				<target><![CDATA[Post nr. og by]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.price" approved="yes">
+				<source><![CDATA[Price]]></source>
+				<target><![CDATA[Pris]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.status" approved="yes">
+				<source><![CDATA[Product Status]]></source>
+				<target><![CDATA[Annonce status]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.todate" approved="yes">
+				<source><![CDATA[Todate]]></source>
+				<target><![CDATA[Til dato]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.type" approved="yes">
+				<source><![CDATA[Type]]></source>
+				<target><![CDATA[Annoncetype]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.user" approved="yes">
+				<source><![CDATA[User]]></source>
+				<target><![CDATA[Bruger]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_users" approved="yes">
+				<source><![CDATA[Users]]></source>
+				<target><![CDATA[Brugere]]></target>
+			</trans-unit>
+			<trans-unit id="update_msg" approved="yes">
+				<source><![CDATA[updated the advetisement]]></source>
+				<target><![CDATA[opdaterede annoncen.]]></target>
+			</trans-unit>
+			<trans-unit id="updated_by_admin" approved="yes">
+				<source><![CDATA[has been updated by admin]]></source>
+				<target><![CDATA[er blevet opdateret af en admin.]]></target>
+			</trans-unit>
+			<trans-unit id="user_product.activate_product" approved="yes">
+				<source><![CDATA[Show]]></source>
+				<target><![CDATA[Vis]]></target>
+			</trans-unit>
+			<trans-unit id="user_product.deactivate_product" approved="yes">
+				<source><![CDATA[Hide]]></source>
+				<target><![CDATA[Skjul]]></target>
+			</trans-unit>
+			<trans-unit id="user_product.delete_product" approved="yes">
+				<source><![CDATA[Delete]]></source>
+				<target><![CDATA[Slet]]></target>
+			</trans-unit>
+			<trans-unit id="user_product.edit_product" approved="yes">
+				<source><![CDATA[Edit]]></source>
+				<target><![CDATA[Ret]]></target>
+			</trans-unit>
+			<trans-unit id="user_product.go_back" approved="yes">
+				<source><![CDATA[Product List]]></source>
+				<target><![CDATA[Annonce liste]]></target>
+			</trans-unit>
+			<trans-unit id="user_product.new_product" approved="yes">
+				<source><![CDATA[Create New Product]]></source>
+				<target><![CDATA[Opret ny annonce]]></target>
+			</trans-unit>
+			<trans-unit id="user_product.search" approved="yes">
+				<source><![CDATA[Search]]></source>
+				<target><![CDATA[Søg]]></target>
+			</trans-unit>
+			<trans-unit id="user_product.time_period" approved="yes">
+				<source><![CDATA[Time Period]]></source>
+				<target><![CDATA[Tidsperiode]]></target>
+			</trans-unit>
+			<trans-unit id="user_product.to" approved="yes">
+				<source><![CDATA[to]]></source>
+				<target><![CDATA[Til]]></target>
+			</trans-unit>
+			<trans-unit id="user_product.user_action" approved="yes">
+				<source><![CDATA[Action]]></source>
+				<target><![CDATA[Handling]]></target>
+			</trans-unit>
+			<trans-unit id="user_product_list" approved="yes">
+				<source><![CDATA[My Products]]></source>
+				<target><![CDATA[Mine annoncer]]></target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

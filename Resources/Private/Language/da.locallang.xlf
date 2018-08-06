@@ -1,10 +1,98 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="da" datatype="plaintext" original="messages" date="2018-08-06T10:46:05Z">
+	<file source-language="en" target-language="da" datatype="plaintext" original="messages" date="2018-07-27T10:59:05Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
 		<body>
+			<trans-unit id="tx_productadvertisement_domain_model_category" approved="yes">
+				<source><![CDATA[Category]]></source>
+				<target><![CDATA[Kategori]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_category.description" approved="yes">
+				<source><![CDATA[Description]]></source>
+				<target><![CDATA[Beskrivelse]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_category.name" approved="yes">
+				<source><![CDATA[Name]]></source>
+				<target><![CDATA[Navn]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products" approved="yes">
+				<source><![CDATA[Products]]></source>
+				<target><![CDATA[Annoncer]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.approve" approved="yes">
+				<source><![CDATA[Approve]]></source>
+				<target><![CDATA[Godkend]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.category" approved="yes">
+				<source><![CDATA[Category]]></source>
+				<target><![CDATA[Kategori]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.description" approved="yes">
+				<source><![CDATA[Description]]></source>
+				<target><![CDATA[Beskrivelse]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.fromdate" approved="yes">
+				<source><![CDATA[Fromdate]]></source>
+				<target><![CDATA[Fra dato]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.images" approved="yes">
+				<source><![CDATA[Images]]></source>
+				<target><![CDATA[Billeder]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.name" approved="yes">
+				<source><![CDATA[Name]]></source>
+				<target><![CDATA[Annonce navn]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.owneremail" approved="yes">
+				<source><![CDATA[Email]]></source>
+				<target><![CDATA[E-mail adresse]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownername" approved="yes">
+				<source><![CDATA[Name]]></source>
+				<target><![CDATA[Fulde navn]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerphone" approved="yes">
+				<source><![CDATA[Contact]]></source>
+				<target><![CDATA[Telefonnummer]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerplace" approved="yes">
+				<source><![CDATA[Place]]></source>
+				<target><![CDATA[Adresse]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.ownerzip" approved="yes">
+				<source><![CDATA[Zip]]></source>
+				<target><![CDATA[Post nr. og by]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.price" approved="yes">
+				<source><![CDATA[Price]]></source>
+				<target><![CDATA[Pris]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.status" approved="yes">
+				<source><![CDATA[Status]]></source>
+				<target><![CDATA[Status]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.timeduration" approved="yes">
+				<source><![CDATA[Available From - To]]></source>
+				<target><![CDATA[Tilgængelig fra - til]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.todate" approved="yes">
+				<source><![CDATA[Todate]]></source>
+				<target><![CDATA[Til dato]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.type" approved="yes">
+				<source><![CDATA[Type]]></source>
+				<target><![CDATA[Annoncetype]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_products.user" approved="yes">
+				<source><![CDATA[User]]></source>
+				<target><![CDATA[Bruger]]></target>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_users" approved="yes">
+				<source><![CDATA[Users]]></source>
+				<target><![CDATA[Brugere]]></target>
+			</trans-unit>
 			<trans-unit id="products.ownerRegion" approved="yes">
 				<source><![CDATA[Owner region]]></source>
 				<target><![CDATA[Landsdel]]></target>

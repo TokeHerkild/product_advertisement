@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="da" datatype="plaintext" original="messages" date="2018-08-06T10:53:20Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+			<trans-unit id="approve.description" approved="yes">
+				<source><![CDATA[approve]]></source>
+				<target><![CDATA[Godkend]]></target>
+			</trans-unit>
+			<trans-unit id="category.description" approved="yes">
+				<source><![CDATA[category]]></source>
+				<target><![CDATA[Kategori]]></target>
+			</trans-unit>
+			<trans-unit id="description.description" approved="yes">
+				<source><![CDATA[description]]></source>
+				<target><![CDATA[beskrivelse]]></target>
+			</trans-unit>
+			<trans-unit id="fromdate.description" approved="yes">
+				<source><![CDATA[fromdate]]></source>
+				<target><![CDATA[fra dato]]></target>
+			</trans-unit>
+			<trans-unit id="images.description" approved="yes">
+				<source><![CDATA[images]]></source>
+				<target><![CDATA[billeder]]></target>
+			</trans-unit>
+			<trans-unit id="name.description" approved="yes">
+				<source><![CDATA[name]]></source>
+				<target><![CDATA[navn]]></target>
+			</trans-unit>
+			<trans-unit id="owneremail.description" approved="yes">
+				<source><![CDATA[Email]]></source>
+				<target><![CDATA[E-mail]]></target>
+			</trans-unit>
+			<trans-unit id="ownername.description" approved="yes">
+				<source><![CDATA[Name]]></source>
+				<target><![CDATA[Navn]]></target>
+			</trans-unit>
+			<trans-unit id="ownerphone.description" approved="yes">
+				<source><![CDATA[Contact]]></source>
+				<target><![CDATA[Kontakt]]></target>
+			</trans-unit>
+			<trans-unit id="ownerplace.description" approved="yes">
+				<source><![CDATA[Place]]></source>
+				<target><![CDATA[By]]></target>
+			</trans-unit>
+			<trans-unit id="ownerzip.description" approved="yes">
+				<source><![CDATA[Zip]]></source>
+				<target><![CDATA[Post nr.]]></target>
+			</trans-unit>
+			<trans-unit id="price.description" approved="yes">
+				<source><![CDATA[price]]></source>
+				<target><![CDATA[pris]]></target>
+			</trans-unit>
+			<trans-unit id="status.description" approved="yes">
+				<source><![CDATA[status]]></source>
+				<target><![CDATA[Status]]></target>
+			</trans-unit>
+			<trans-unit id="todate.description" approved="yes">
+				<source><![CDATA[todate]]></source>
+				<target><![CDATA[til dato]]></target>
+			</trans-unit>
+			<trans-unit id="type.description" approved="yes">
+				<source><![CDATA[type]]></source>
+				<target><![CDATA[type]]></target>
+			</trans-unit>
+			<trans-unit id="user.description" approved="yes">
+				<source><![CDATA[user]]></source>
+				<target><![CDATA[Bruger]]></target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

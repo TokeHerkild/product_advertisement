@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="da" datatype="plaintext" original="messages" date="2018-07-26T12:37:48Z">
+		<header>
+			<generator>LFEditor</generator>
+		</header>
+		<body>
+			<trans-unit id="description.description" approved="yes">
+				<source><![CDATA[description]]></source>
+				<target><![CDATA[Beskrivelse]]></target>
+			</trans-unit>
+			<trans-unit id="name.description" approved="yes">
+				<source><![CDATA[name]]></source>
+				<target><![CDATA[Navn]]></target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
