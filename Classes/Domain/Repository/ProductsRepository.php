@@ -157,6 +157,13 @@ class ProductsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 		}
 	}
 
+    /**
+     * @param \Drcsystems\ProductAdvertisement\Domain\Model\Category $category
+     * @param \TYPO3\CMS\Extbase\Persistence\QueryInterface $query
+     * @param array $conditions
+     * @return array
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\InvalidQueryException
+     */
     public function getRecusiveCategories(Category $category, QueryInterface $query, array $conditions = [])
     {
         $conditions[] = $query->contains('category', $category);
