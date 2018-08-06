@@ -121,23 +121,15 @@
 				<f:form.textfield property="ownerphone" class="form-control" id="ownerphone" />
 			</div>	
 		</div>
-		<div class="col-md-offset-2 col-md-5">
-			<div class="form-group">
-				<label for="ownerzip">
-					<f:translate key="tx_productadvertisement_domain_model_products.ownerzip" />*
-				</label>
-				<f:form.textfield property="ownerzip" id="ownerzip" class="form-control validate"/>
-			</div>	
-		</div>
 	</div>
 		
 	<div class="row">
 		<div class="col-md-5">
 			<div class="form-group">
-				<label for="ownerplace">
-					<f:translate key="tx_productadvertisement_domain_model_products.ownerplace" />*
+				<label for="ownerRegion">
+					<f:translate key="products.ownerRegion" />*
 				</label>
-				<f:form.textfield property="ownerplace" class="form-control validate" id="ownerplace" />
+				<f:form.select options="{regionSelect}" property="ownerRegion" optionValueField="id" optionLabelField="label" />
 			</div>	
 		</div>
 	</div>

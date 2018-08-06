@@ -19,6 +19,7 @@ namespace Drcsystems\ProductAdvertisement\Controller;
 use Drcsystems\ProductAdvertisement\Domain\Model\Products;
 use Drcsystems\ProductAdvertisement\Property\TypeConverter\UploadedFileReferenceConverter;
 use Drcsystems\ProductAdvertisement\Service\CategoryService;
+use Drcsystems\ProductAdvertisement\Service\RegionService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
@@ -63,11 +64,24 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     protected $categoryService;
 
     /**
+     * @var \Drcsystems\ProductAdvertisement\Service\RegionService
+     */
+    protected $regionService;
+
+    /**
      * @param \Drcsystems\ProductAdvertisement\Service\CategoryService $categoryService
      */
     public function injectCategoryService(CategoryService $categoryService)
     {
         $this->categoryService = $categoryService;
+    }
+
+    /**
+     * @param \Drcsystems\ProductAdvertisement\Service\RegionService $regionService
+     */
+    public function injectRegionService(RegionService $regionService)
+    {
+        $this->regionService = $regionService;
     }
 
 
@@ -198,6 +212,7 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         $user = $this->usersRepository->findByUid($this->userUid);
         $this->view->assign('categories', $productCategory);
         $this->view->assign('user', $user);
+        $this->view->assign('regions', $this->regionService->getRegionList());
     }
 
     /**
@@ -307,6 +322,7 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         $productCategory = $this->categoryRepository->findAllParents();
         $productCategory = $this->categoryService->getCategoryList($productCategory);
         $this->view->assign('categories', $productCategory);
+        $this->view->assign('regions', $this->regionService->getRegionList());
     }
 
     /**
@@ -511,6 +527,7 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         //$productCategory = $this->categoryRepository->findAll();
         $productCategory = $this->categoryRepository->findAllParents();
         $productCategory = $this->categoryService->getCategoryList($productCategory);
+        $regions = $this->regionService->getRegionList();
 
         // Auto Fill Input Fields;
         if (isset($getArgs['productName'])) {
@@ -538,6 +555,7 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         $this->view->assign('categories', $productCategory);
         $this->view->assign('detailPage', $this->settings['detailPageId']);
         $this->view->assign('listPage', $this->settings['listPageId']);
+        $this->view->assign('regions', $regions);
     }
 
     /**
