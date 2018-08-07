@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-06T10:55:25Z">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-07T10:54:04Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
@@ -10,6 +10,27 @@
 			</trans-unit>
 			<trans-unit id="admin_prefix">
 				<source><![CDATA[Dear Admin,]]></source>
+			</trans-unit>
+			<trans-unit id="attribute.caption">
+				<source><![CDATA[Caption]]></source>
+			</trans-unit>
+			<trans-unit id="attribute.name">
+				<source><![CDATA[Name]]></source>
+			</trans-unit>
+			<trans-unit id="attribute.render.type.0">
+				<source><![CDATA[Text]]></source>
+			</trans-unit>
+			<trans-unit id="attribute.render.type.1">
+				<source><![CDATA[Integer]]></source>
+			</trans-unit>
+			<trans-unit id="attribute.render.type.2">
+				<source><![CDATA[DateTime]]></source>
+			</trans-unit>
+			<trans-unit id="attribute.type">
+				<source><![CDATA[Attribute Type]]></source>
+			</trans-unit>
+			<trans-unit id="attributeValue.value">
+				<source><![CDATA[Value]]></source>
 			</trans-unit>
 			<trans-unit id="category_addnew">
 				<source><![CDATA[Add New Category]]></source>
@@ -191,6 +212,12 @@
 			<trans-unit id="thank_you_msg_extra">
 				<source><![CDATA[Your advertisement has been registered successfully, We will notify you once admin approve it.]]></source>
 			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_attribute">
+				<source><![CDATA[Attribute]]></source>
+			</trans-unit>
+			<trans-unit id="tx_productadvertisement_domain_model_attributevalue">
+				<source><![CDATA[Attribute value]]></source>
+			</trans-unit>
 			<trans-unit id="tx_productadvertisement_domain_model_category">
 				<source><![CDATA[Category]]></source>
 			</trans-unit>
@@ -301,35 +328,6 @@
 			</trans-unit>
 			<trans-unit id="user_product_list">
 				<source><![CDATA[My Products]]></source>
-			</trans-unit>
-			<!-- Attrubute -->
-			<trans-unit id="tx_productadvertisement_domain_model_attribute">
-				<source>Attribute</source>
-			</trans-unit>
-			<trans-unit id="attribute.name">
-				<source>Name</source>
-			</trans-unit>
-			<trans-unit id="attribute.caption">
-				<source>Caption</source>
-			</trans-unit>
-			<trans-unit id="attribute.type">
-				<source>Attribute Type</source>
-			</trans-unit>
-			<trans-unit id="attribute.render.type.0">
-				<source>Text</source>
-			</trans-unit>
-			<trans-unit id="attribute.render.type.1">
-				<source>Integer</source>
-			</trans-unit>
-			<trans-unit id="attribute.render.type.2">
-				<source>DateTime</source>
-			</trans-unit>
-			<!-- attributeValue -->
-			<trans-unit id="tx_productadvertisement_domain_model_attributevalue">
-				<source>Attribute value</source>
-			</trans-unit>
-			<trans-unit id="attributeValue.value">
-				<source>Value</source>
 			</trans-unit>
 		</body>
 	</file>

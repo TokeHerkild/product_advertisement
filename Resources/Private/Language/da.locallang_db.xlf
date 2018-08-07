@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" target-language="da" datatype="plaintext" original="messages" date="2018-08-06T10:55:25Z">
+	<file source-language="en" target-language="da" datatype="plaintext" original="messages" date="2018-08-07T10:54:04Z">
 		<header>
 			<generator>LFEditor</generator>
 		</header>
@@ -304,7 +304,7 @@
 			</trans-unit>
 			<trans-unit id="tx_productadvertisement_domain_model_products.name" approved="yes">
 				<source><![CDATA[Product Name]]></source>
-				<target><![CDATA[Annonce navn]]></target>
+				<target><![CDATA[Navn]]></target>
 			</trans-unit>
 			<trans-unit id="tx_productadvertisement_domain_model_products.owneremail" approved="yes">
 				<source><![CDATA[Owner Email]]></source>
