@@ -70,6 +70,7 @@ return [
                 'type' => 'input',
                 'default' => 'd-m-Y',
                 'eval' => 'trim',
+                'displayCond' => 'FIELD:attribute_type:REQ:2',
             ],
         ],
         'category' => [
