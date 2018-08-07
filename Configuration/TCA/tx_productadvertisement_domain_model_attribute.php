@@ -20,6 +20,7 @@ return [
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l10n_parent',
         'transOrigDiffSourceField' => 'l10n_diffsource',
+        'requestUpdate' => 'attribute_type',
         'delete' => 'deleted',
         'enablecolumns' => array(
             'disabled' => 'hidden',
@@ -64,13 +65,13 @@ return [
             ],
         ],
         'date_format' => [
+            'displayCond' => 'FIELD:attribute_type:=:2',
             'exclude' => 1,
             'label' => $lllPath . 'attribute.dateFormat',
             'config' => [
                 'type' => 'input',
                 'default' => 'd-m-Y',
                 'eval' => 'trim',
-                'displayCond' => 'FIELD:attribute_type:REQ:2',
             ],
         ],
         'category' => [
@@ -88,7 +89,7 @@ return [
     ],
     'types' => [
         0 => [
-            'showitem' => 'name,caption,attribute_type,category'
+            'showitem' => 'name,caption,attribute_type,date_format,category'
         ]
     ],
     'palettes' => [],
