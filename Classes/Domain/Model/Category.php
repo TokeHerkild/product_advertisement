@@ -46,6 +46,11 @@ class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      */
 	protected $subCategories;
 
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Drcsystems\ProductAdvertisement\Domain\Model\Attribute>
+     */
+	protected $attributes;
+
 	public function __construct()
     {
         $this->subCategories = new ObjectStorage();
@@ -145,6 +150,33 @@ class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function hasSubCategories()
     {
         return (bool) ($this->getSubCategories()->count() > 0);
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getAttributes()
+    {
+        return $this->attributes;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $attributes
+     */
+    public function setAttributes(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $attributes)
+    {
+        $this->attributes = $attributes;
+    }
+
+    /**
+     * @param \Drcsystems\ProductAdvertisement\Domain\Model\Attribute $attribute
+     */
+    public function addAttribute(Attribute $attribute)
+    {
+        if (!$this->attributes) {
+            $this->attributes = new ObjectStorage();
+        }
+        $this->attributes->attach($attribute);
     }
 
 }

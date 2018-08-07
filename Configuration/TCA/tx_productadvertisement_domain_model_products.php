@@ -34,6 +34,7 @@ return array(
                         . 'description, fromdate, todate, price, type, ownername, owneremail, ownerphone, ownerzip,'
                         . 'ownerplace, status, approve, category, user,'
                         . '--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime,'
+                        . '--div--;Attributes, attributes,'
                         . '--div--;Yoast SEO, tx_yoastseo_focuskeyword, tx_yoastseo_snippetpreview, tx_yoastseo_readability_analysis'
         ],
 	),
@@ -390,6 +391,15 @@ return array(
 				'maxitems' => 1,
 			),
 		),
+		'attributes' => [
+		    'label' => $lllPath . 'products.attributes',
+            'exclude' => 1,
+            'config' => [
+                'type' => 'inline',
+                'foreign_table' => 'tx_productadvertisement_domain_model_attributevalue',
+                'foreign_field' => 'product',
+            ],
+        ],
 		'tx_yoastseo_snippetpreview' => [
 		    'label' => $yoastPrefix . 'snippetPreview',
             'exclude' => true,

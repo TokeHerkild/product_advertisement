@@ -302,6 +302,35 @@
 			<trans-unit id="user_product_list">
 				<source><![CDATA[My Products]]></source>
 			</trans-unit>
+			<!-- Attrubute -->
+			<trans-unit id="tx_productadvertisement_domain_model_attribute">
+				<source>Attribute</source>
+			</trans-unit>
+			<trans-unit id="attribute.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="attribute.caption">
+				<source>Caption</source>
+			</trans-unit>
+			<trans-unit id="attribute.type">
+				<source>Attribute Type</source>
+			</trans-unit>
+			<trans-unit id="attribute.render.type.0">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="attribute.render.type.1">
+				<source>Integer</source>
+			</trans-unit>
+			<trans-unit id="attribute.render.type.2">
+				<source>DateTime</source>
+			</trans-unit>
+			<!-- attributeValue -->
+			<trans-unit id="tx_productadvertisement_domain_model_attributevalue">
+				<source>Attribute value</source>
+			</trans-unit>
+			<trans-unit id="attributeValue.value">
+				<source>Value</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

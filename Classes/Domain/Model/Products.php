@@ -14,6 +14,7 @@ namespace Drcsystems\ProductAdvertisement\Domain\Model;
  * The TYPO3 project - inspiring people to share!
  */
 
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
 
 /**
@@ -146,6 +147,11 @@ class Products extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 	 * @cascade remove
 	 */
 	protected $images = null;
+
+    /**
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Drcsystems\ProductAdvertisement\Domain\Model\AttributeValue>
+     */
+	protected $attributes;
 
 	/**
 	 * __construct
@@ -615,6 +621,33 @@ class Products extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $result = LocalizationUtility::translate('products.ownerRegion.I.' . $this->ownerRegion, 'ProductAdvertisement');
         $result = !empty($result) ? $result : (string) $this->ownerRegion;
         return $result;
+    }
+
+    /**
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage
+     */
+    public function getAttributes()
+    {
+        return $this->attributes;
+    }
+
+    /**
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $attributes
+     */
+    public function setAttributes(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $attributes)
+    {
+        $this->attributes = $attributes;
+    }
+
+    /**
+     * @param \Drcsystems\ProductAdvertisement\Domain\Model\AttributeValue $attributeValue
+     */
+    public function addAttribute(AttributeValue $attributeValue)
+    {
+        if (!$this->attributes) {
+            $this->attributes = new ObjectStorage();
+        }
+        $this->attributes->attach($attributeValue);
     }
 
 }
