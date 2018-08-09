@@ -1,369 +1,385 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-07T10:54:04Z">
-		<header>
-			<generator>LFEditor</generator>
-		</header>
-		<body>
-			<trans-unit id="active_product_description_start">
-				<source><![CDATA[Your advertisement]]></source>
-			</trans-unit>
-			<trans-unit id="admin_prefix">
-				<source><![CDATA[Dear Admin,]]></source>
-			</trans-unit>
-			<trans-unit id="attribute.caption">
-				<source><![CDATA[Caption]]></source>
-			</trans-unit>
-			<trans-unit id="attribute.name">
-				<source><![CDATA[Name]]></source>
-			</trans-unit>
-			<trans-unit id="attribute.render.type.0">
-				<source><![CDATA[Text]]></source>
-			</trans-unit>
-			<trans-unit id="attribute.render.type.1">
-				<source><![CDATA[Integer]]></source>
-			</trans-unit>
-			<trans-unit id="attribute.render.type.2">
-				<source><![CDATA[DateTime]]></source>
-			</trans-unit>
-			<trans-unit id="attribute.type">
-				<source><![CDATA[Attribute Type]]></source>
-			</trans-unit>
-			<trans-unit id="attributeValue.value">
-				<source><![CDATA[Value]]></source>
-			</trans-unit>
-			<trans-unit id="category_addnew">
-				<source><![CDATA[Add New Category]]></source>
-			</trans-unit>
-			<trans-unit id="category_edit">
-				<source><![CDATA[Edit Category]]></source>
-			</trans-unit>
-			<trans-unit id="category_uid">
-				<source><![CDATA[Category Uid]]></source>
-			</trans-unit>
-			<trans-unit id="check_out_msg">
-				<source><![CDATA[Please check it out.]]></source>
-			</trans-unit>
-			<trans-unit id="crdate.posted-on">
-				<source><![CDATA[Posten on]]></source>
-			</trans-unit>
-			<trans-unit id="create_new">
-				<source><![CDATA[Create New]]></source>
-			</trans-unit>
-			<trans-unit id="create_new_product.title">
-				<source><![CDATA[Create New Advertisement]]></source>
-			</trans-unit>
-			<trans-unit id="detail_page.name">
-				<source><![CDATA[Product Details]]></source>
-			</trans-unit>
-			<trans-unit id="disapproved_by">
-				<source><![CDATA[has disapproved by admin.]]></source>
-			</trans-unit>
-			<trans-unit id="edit_page.name">
-				<source><![CDATA[Edit Products]]></source>
-			</trans-unit>
-			<trans-unit id="edit_product_title">
-				<source><![CDATA[Save]]></source>
-			</trans-unit>
-			<trans-unit id="email_footer">
-				<source><![CDATA[Have a Great Day..!]]></source>
-			</trans-unit>
-			<trans-unit id="email_header">
-				<source><![CDATA[Notification for you..!]]></source>
-			</trans-unit>
-			<trans-unit id="fe_users.tx_extbase_type.Tx_ProductAdvertisement_Users">
-				<source><![CDATA[Products Advertisement Users]]></source>
-			</trans-unit>
-			<trans-unit id="get_print_btn">
-				<source><![CDATA[Get Print]]></source>
-			</trans-unit>
-			<trans-unit id="has_approve_msg">
-				<source><![CDATA[has been approved by admin.]]></source>
-			</trans-unit>
-			<trans-unit id="has_register">
-				<source><![CDATA[has registered a advertisement named]]></source>
-			</trans-unit>
-			<trans-unit id="has_updated">
-				<source><![CDATA[has been updated successfully.]]></source>
-			</trans-unit>
-			<trans-unit id="inquiry_form">
-				<source><![CDATA[Inquiry Form]]></source>
-			</trans-unit>
-			<trans-unit id="inquiry_send_user_start">
-				<source><![CDATA[There is an inquiry for your product's advertisement]]></source>
-			</trans-unit>
-			<trans-unit id="inquiry_start_msg">
-				<source><![CDATA[Your inquiry for advertisement]]></source>
-			</trans-unit>
-			<trans-unit id="inquiry_thanks_extra_part">
-				<source><![CDATA[has been registered, Thank you for choosing us.]]></source>
-			</trans-unit>
-			<trans-unit id="inquiry_user_email">
-				<source><![CDATA[Email]]></source>
-			</trans-unit>
-			<trans-unit id="inquiry_user_msg">
-				<source><![CDATA[Message]]></source>
-			</trans-unit>
-			<trans-unit id="inquiry_user_name">
-				<source><![CDATA[Name]]></source>
-			</trans-unit>
-			<trans-unit id="inquiry_user_phone">
-				<source><![CDATA[Contact No]]></source>
-			</trans-unit>
-			<trans-unit id="mail_start_prefix">
-				<source><![CDATA[Dear]]></source>
-			</trans-unit>
-			<trans-unit id="mail_user">
-				<source><![CDATA[User]]></source>
-			</trans-unit>
-			<trans-unit id="manage.categorises">
-				<source><![CDATA[Manage Categories]]></source>
-			</trans-unit>
-			<trans-unit id="manage.products">
-				<source><![CDATA[Manage Products]]></source>
-			</trans-unit>
-			<trans-unit id="notify_once">
-				<source><![CDATA[We will notify you once Admin Approve It.]]></source>
-			</trans-unit>
-			<trans-unit id="owner_info">
-				<source><![CDATA[Owner Information]]></source>
-			</trans-unit>
-			<trans-unit id="product_list_title">
-				<source><![CDATA[Products]]></source>
-			</trans-unit>
-			<trans-unit id="product_registration.approveList">
-				<source><![CDATA[Approve / Disapprove]]></source>
-			</trans-unit>
-			<trans-unit id="product_registration.approvestatus">
-				<source><![CDATA[Approve Status]]></source>
-			</trans-unit>
-			<trans-unit id="product_registration.offer">
-				<source><![CDATA[Wants to sale]]></source>
-			</trans-unit>
-			<trans-unit id="product_registration.search">
-				<source><![CDATA[Wants to purchase]]></source>
-			</trans-unit>
-			<trans-unit id="product_registration.typeLable">
-				<source><![CDATA[-- Select Product Type --]]></source>
-			</trans-unit>
-			<trans-unit id="products.ownerRegion">
-				<source><![CDATA[Owner region]]></source>
-			</trans-unit>
-			<trans-unit id="products.ownerRegion.I.0">
-				<source><![CDATA[Select region]]></source>
-			</trans-unit>
-			<trans-unit id="products.ownerRegion.I.1">
-				<source><![CDATA[Bornholm]]></source>
-			</trans-unit>
-			<trans-unit id="products.ownerRegion.I.2">
-				<source><![CDATA[Fyn]]></source>
-			</trans-unit>
-			<trans-unit id="products.ownerRegion.I.3">
-				<source><![CDATA[København og omegn]]></source>
-			</trans-unit>
-			<trans-unit id="products.ownerRegion.I.4">
-				<source><![CDATA[Midt- og Vestjylland]]></source>
-			</trans-unit>
-			<trans-unit id="products.ownerRegion.I.5">
-				<source><![CDATA[Nordjylland]]></source>
-			</trans-unit>
-			<trans-unit id="products.ownerRegion.I.6">
-				<source><![CDATA[Sjælland]]></source>
-			</trans-unit>
-			<trans-unit id="products.ownerRegion.I.7">
-				<source><![CDATA[Syd- og Sønderjylland]]></source>
-			</trans-unit>
-			<trans-unit id="products.ownerRegion.I.8">
-				<source><![CDATA[Sydsjælland og Lolland-Falster]]></source>
-			</trans-unit>
-			<trans-unit id="products.ownerRegion.I.9">
-				<source><![CDATA[Østjylland]]></source>
-			</trans-unit>
-			<trans-unit id="save_data">
-				<source><![CDATA[Save]]></source>
-			</trans-unit>
-			<trans-unit id="search_form.title">
-				<source><![CDATA[Search]]></source>
-			</trans-unit>
-			<trans-unit id="searchfield.category">
-				<source><![CDATA[Product Category]]></source>
-			</trans-unit>
-			<trans-unit id="searchfield.default_category">
-				<source><![CDATA[Select Category]]></source>
-			</trans-unit>
-			<trans-unit id="searchfield.name">
-				<source><![CDATA[Product Name]]></source>
-			</trans-unit>
-			<trans-unit id="searchfield.place">
-				<source><![CDATA[Product Place]]></source>
-			</trans-unit>
-			<trans-unit id="searchpage.no_product_found">
-				<source><![CDATA[Der blev ikke fundet nogle annoncer.]]></source>
-			</trans-unit>
-			<trans-unit id="send_message_btn">
-				<source><![CDATA[Send Message]]></source>
-			</trans-unit>
-			<trans-unit id="send_now">
-				<source><![CDATA[Send Now]]></source>
-			</trans-unit>
-			<trans-unit id="thank_you_msg">
-				<source><![CDATA[Thank You for registering advertisement]]></source>
-			</trans-unit>
-			<trans-unit id="thank_you_msg_extra">
-				<source><![CDATA[Your advertisement has been registered successfully, We will notify you once admin approve it.]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_attribute">
-				<source><![CDATA[Attribute]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_attributevalue">
-				<source><![CDATA[Attribute value]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_category">
-				<source><![CDATA[Category]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_category.description">
-				<source><![CDATA[Description]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_category.name">
-				<source><![CDATA[Name]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products">
-				<source><![CDATA[Products]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.approve">
-				<source><![CDATA[Approve]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.category">
-				<source><![CDATA[Category]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.delete">
-				<source><![CDATA[Delete]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.description">
-				<source><![CDATA[Description]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.disapprove">
-				<source><![CDATA[Disapprove]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.edit">
-				<source><![CDATA[Edit]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.fromdate">
-				<source><![CDATA[Fromdate]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.images">
-				<source><![CDATA[Images]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.name">
-				<source><![CDATA[Product Name]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.owneremail">
-				<source><![CDATA[Owner Email]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.ownername">
-				<source><![CDATA[Owner Name]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.ownerphone">
-				<source><![CDATA[Owner Contact]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.ownerplace">
-				<source><![CDATA[Owner Place]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.ownerzip">
-				<source><![CDATA[Owner Zip]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.price">
-				<source><![CDATA[Price]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.status">
-				<source><![CDATA[Product Status]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.todate">
-				<source><![CDATA[Todate]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.type">
-				<source><![CDATA[Type]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_products.user">
-				<source><![CDATA[User]]></source>
-			</trans-unit>
-			<trans-unit id="tx_productadvertisement_domain_model_users">
-				<source><![CDATA[Users]]></source>
-			</trans-unit>
-			<trans-unit id="update_msg">
-				<source><![CDATA[updated the advetisement]]></source>
-			</trans-unit>
-			<trans-unit id="updated_by_admin">
-				<source><![CDATA[has been updated by admin]]></source>
-			</trans-unit>
-			<trans-unit id="user_product.activate_product">
-				<source><![CDATA[Show]]></source>
-			</trans-unit>
-			<trans-unit id="user_product.deactivate_product">
-				<source><![CDATA[Hide]]></source>
-			</trans-unit>
-			<trans-unit id="user_product.delete_product">
-				<source><![CDATA[Delete]]></source>
-			</trans-unit>
-			<trans-unit id="user_product.edit_product">
-				<source><![CDATA[Edit]]></source>
-			</trans-unit>
-			<trans-unit id="user_product.go_back">
-				<source><![CDATA[Product List]]></source>
-			</trans-unit>
-			<trans-unit id="user_product.new_product">
-				<source><![CDATA[Create New Product]]></source>
-			</trans-unit>
-			<trans-unit id="user_product.search">
-				<source><![CDATA[Search]]></source>
-			</trans-unit>
-			<trans-unit id="user_product.time_period">
-				<source><![CDATA[Time Period]]></source>
-			</trans-unit>
-			<trans-unit id="user_product.to">
-				<source><![CDATA[to]]></source>
-			</trans-unit>
-			<trans-unit id="user_product.user_action">
-				<source><![CDATA[Action]]></source>
-			</trans-unit>
-			<trans-unit id="user_product_list">
-				<source><![CDATA[My Products]]></source>
-			</trans-unit>
-			<!-- Attrubute -->
-			<trans-unit id="tx_productadvertisement_domain_model_attribute">
-				<source>Attribute</source>
-			</trans-unit>
-			<trans-unit id="attribute.name">
-				<source>Name</source>
-			</trans-unit>
-			<trans-unit id="attribute.caption">
-				<source>Caption</source>
-			</trans-unit>
-			<trans-unit id="attribute.type">
-				<source>Attribute Type</source>
-			</trans-unit>
-			<trans-unit id="attribute.render.type.0">
-				<source>Text</source>
-			</trans-unit>
-			<trans-unit id="attribute.render.type.1">
-				<source>Integer</source>
-			</trans-unit>
-			<trans-unit id="attribute.render.type.2">
-				<source>DateTime</source>
-			</trans-unit>
-			<trans-unit id="attribute.render.type.3">
-				<source>Boolean</source>
-			</trans-unit>
-			<trans-unit id="attribute.dateFormat">
-				<source>DateTime format</source>
-			</trans-unit>
-			<!-- attributeValue -->
-			<trans-unit id="tx_productadvertisement_domain_model_attributevalue">
-				<source>Attribute value</source>
-			</trans-unit>
-			<trans-unit id="attributeValue.value">
-				<source>Value</source>
-			</trans-unit>
-		</body>
-	</file>
+    <file source-language="en" datatype="plaintext" original="messages" date="2018-08-07T10:54:04Z">
+        <header>
+            <generator>LFEditor</generator>
+        </header>
+        <body>
+            <trans-unit id="active_product_description_start">
+                <source><![CDATA[Your advertisement]]></source>
+            </trans-unit>
+            <trans-unit id="admin_prefix">
+                <source><![CDATA[Dear Admin,]]></source>
+            </trans-unit>
+            <trans-unit id="attribute.caption">
+                <source><![CDATA[Caption]]></source>
+            </trans-unit>
+            <trans-unit id="attribute.name">
+                <source><![CDATA[Name]]></source>
+            </trans-unit>
+            <trans-unit id="attribute.render.type.0">
+                <source><![CDATA[Text]]></source>
+            </trans-unit>
+            <trans-unit id="attribute.render.type.1">
+                <source><![CDATA[Integer]]></source>
+            </trans-unit>
+            <trans-unit id="attribute.render.type.2">
+                <source><![CDATA[DateTime]]></source>
+            </trans-unit>
+            <trans-unit id="attribute.type">
+                <source><![CDATA[Attribute Type]]></source>
+            </trans-unit>
+            <trans-unit id="attributeValue.value">
+                <source><![CDATA[Value]]></source>
+            </trans-unit>
+            <trans-unit id="category_addnew">
+                <source><![CDATA[Add New Category]]></source>
+            </trans-unit>
+            <trans-unit id="category_edit">
+                <source><![CDATA[Edit Category]]></source>
+            </trans-unit>
+            <trans-unit id="category_uid">
+                <source><![CDATA[Category Uid]]></source>
+            </trans-unit>
+            <trans-unit id="check_out_msg">
+                <source><![CDATA[Please check it out.]]></source>
+            </trans-unit>
+            <trans-unit id="crdate.posted-on">
+                <source><![CDATA[Posten on]]></source>
+            </trans-unit>
+            <trans-unit id="create_new">
+                <source><![CDATA[Create New]]></source>
+            </trans-unit>
+            <trans-unit id="create_new_product.title">
+                <source><![CDATA[Create New Advertisement]]></source>
+            </trans-unit>
+            <trans-unit id="detail_page.name">
+                <source><![CDATA[Product Details]]></source>
+            </trans-unit>
+            <trans-unit id="disapproved_by">
+                <source><![CDATA[has disapproved by admin.]]></source>
+            </trans-unit>
+            <trans-unit id="edit_page.name">
+                <source><![CDATA[Edit Products]]></source>
+            </trans-unit>
+            <trans-unit id="edit_product_title">
+                <source><![CDATA[Save]]></source>
+            </trans-unit>
+            <trans-unit id="email_footer">
+                <source><![CDATA[Have a Great Day..!]]></source>
+            </trans-unit>
+            <trans-unit id="email_header">
+                <source><![CDATA[Notification for you..!]]></source>
+            </trans-unit>
+            <trans-unit id="fe_users.tx_extbase_type.Tx_ProductAdvertisement_Users">
+                <source><![CDATA[Products Advertisement Users]]></source>
+            </trans-unit>
+            <trans-unit id="get_print_btn">
+                <source><![CDATA[Get Print]]></source>
+            </trans-unit>
+            <trans-unit id="has_approve_msg">
+                <source><![CDATA[has been approved by admin.]]></source>
+            </trans-unit>
+            <trans-unit id="has_register">
+                <source><![CDATA[has registered a advertisement named]]></source>
+            </trans-unit>
+            <trans-unit id="has_updated">
+                <source><![CDATA[has been updated successfully.]]></source>
+            </trans-unit>
+            <trans-unit id="inquiry_form">
+                <source><![CDATA[Inquiry Form]]></source>
+            </trans-unit>
+            <trans-unit id="inquiry_send_user_start">
+                <source><![CDATA[There is an inquiry for your product's advertisement]]></source>
+            </trans-unit>
+            <trans-unit id="inquiry_start_msg">
+                <source><![CDATA[Your inquiry for advertisement]]></source>
+            </trans-unit>
+            <trans-unit id="inquiry_thanks_extra_part">
+                <source><![CDATA[has been registered, Thank you for choosing us.]]></source>
+            </trans-unit>
+            <trans-unit id="inquiry_user_email">
+                <source><![CDATA[Email]]></source>
+            </trans-unit>
+            <trans-unit id="inquiry_user_msg">
+                <source><![CDATA[Message]]></source>
+            </trans-unit>
+            <trans-unit id="inquiry_user_name">
+                <source><![CDATA[Name]]></source>
+            </trans-unit>
+            <trans-unit id="inquiry_user_phone">
+                <source><![CDATA[Contact No]]></source>
+            </trans-unit>
+            <trans-unit id="mail_start_prefix">
+                <source><![CDATA[Dear]]></source>
+            </trans-unit>
+            <trans-unit id="mail_user">
+                <source><![CDATA[User]]></source>
+            </trans-unit>
+            <trans-unit id="manage.categorises">
+                <source><![CDATA[Manage Categories]]></source>
+            </trans-unit>
+            <trans-unit id="manage.products">
+                <source><![CDATA[Manage Products]]></source>
+            </trans-unit>
+            <trans-unit id="notify_once">
+                <source><![CDATA[We will notify you once Admin Approve It.]]></source>
+            </trans-unit>
+            <trans-unit id="owner_info">
+                <source><![CDATA[Owner Information]]></source>
+            </trans-unit>
+            <trans-unit id="product_list_title">
+                <source><![CDATA[Products]]></source>
+            </trans-unit>
+            <trans-unit id="product_registration.approveList">
+                <source><![CDATA[Approve / Disapprove]]></source>
+            </trans-unit>
+            <trans-unit id="product_registration.approvestatus">
+                <source><![CDATA[Approve Status]]></source>
+            </trans-unit>
+            <trans-unit id="product_registration.offer">
+                <source><![CDATA[Wants to sale]]></source>
+            </trans-unit>
+            <trans-unit id="product_registration.search">
+                <source><![CDATA[Wants to purchase]]></source>
+            </trans-unit>
+            <trans-unit id="product_registration.typeLable">
+                <source><![CDATA[-- Select Product Type --]]></source>
+            </trans-unit>
+            <trans-unit id="products.ownerRegion">
+                <source><![CDATA[Owner region]]></source>
+            </trans-unit>
+            <trans-unit id="products.ownerRegion.I.0">
+                <source><![CDATA[Select region]]></source>
+            </trans-unit>
+            <trans-unit id="products.ownerRegion.I.1">
+                <source><![CDATA[Bornholm]]></source>
+            </trans-unit>
+            <trans-unit id="products.ownerRegion.I.2">
+                <source><![CDATA[Fyn]]></source>
+            </trans-unit>
+            <trans-unit id="products.ownerRegion.I.3">
+                <source><![CDATA[København og omegn]]></source>
+            </trans-unit>
+            <trans-unit id="products.ownerRegion.I.4">
+                <source><![CDATA[Midt- og Vestjylland]]></source>
+            </trans-unit>
+            <trans-unit id="products.ownerRegion.I.5">
+                <source><![CDATA[Nordjylland]]></source>
+            </trans-unit>
+            <trans-unit id="products.ownerRegion.I.6">
+                <source><![CDATA[Sjælland]]></source>
+            </trans-unit>
+            <trans-unit id="products.ownerRegion.I.7">
+                <source><![CDATA[Syd- og Sønderjylland]]></source>
+            </trans-unit>
+            <trans-unit id="products.ownerRegion.I.8">
+                <source><![CDATA[Sydsjælland og Lolland-Falster]]></source>
+            </trans-unit>
+            <trans-unit id="products.ownerRegion.I.9">
+                <source><![CDATA[Østjylland]]></source>
+            </trans-unit>
+            <trans-unit id="save_data">
+                <source><![CDATA[Save]]></source>
+            </trans-unit>
+            <trans-unit id="search_form.title">
+                <source><![CDATA[Search]]></source>
+            </trans-unit>
+            <trans-unit id="searchfield.category">
+                <source><![CDATA[Product Category]]></source>
+            </trans-unit>
+            <trans-unit id="searchfield.default_category">
+                <source><![CDATA[Select Category]]></source>
+            </trans-unit>
+            <trans-unit id="searchfield.name">
+                <source><![CDATA[Product Name]]></source>
+            </trans-unit>
+            <trans-unit id="searchfield.place">
+                <source><![CDATA[Product Place]]></source>
+            </trans-unit>
+            <trans-unit id="searchpage.no_product_found">
+                <source><![CDATA[Der blev ikke fundet nogle annoncer.]]></source>
+            </trans-unit>
+            <trans-unit id="send_message_btn">
+                <source><![CDATA[Send Message]]></source>
+            </trans-unit>
+            <trans-unit id="send_now">
+                <source><![CDATA[Send Now]]></source>
+            </trans-unit>
+            <trans-unit id="thank_you_msg">
+                <source><![CDATA[Thank You for registering advertisement]]></source>
+            </trans-unit>
+            <trans-unit id="thank_you_msg_extra">
+                <source>
+                    <![CDATA[Your advertisement has been registered successfully, We will notify you once admin approve it.]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_attribute">
+                <source><![CDATA[Attribute]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_attributevalue">
+                <source><![CDATA[Attribute value]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_category">
+                <source><![CDATA[Category]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_category.description">
+                <source><![CDATA[Description]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_category.name">
+                <source><![CDATA[Name]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products">
+                <source><![CDATA[Products]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.approve">
+                <source><![CDATA[Approve]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.category">
+                <source><![CDATA[Category]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.delete">
+                <source><![CDATA[Delete]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.description">
+                <source><![CDATA[Description]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.disapprove">
+                <source><![CDATA[Disapprove]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.edit">
+                <source><![CDATA[Edit]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.fromdate">
+                <source><![CDATA[Fromdate]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.images">
+                <source><![CDATA[Images]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.name">
+                <source><![CDATA[Product Name]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.owneremail">
+                <source><![CDATA[Owner Email]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.ownername">
+                <source><![CDATA[Owner Name]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.ownerphone">
+                <source><![CDATA[Owner Contact]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.ownerplace">
+                <source><![CDATA[Owner Place]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.ownerzip">
+                <source><![CDATA[Owner Zip]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.price">
+                <source><![CDATA[Price]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.status">
+                <source><![CDATA[Product Status]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.todate">
+                <source><![CDATA[Todate]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.type">
+                <source><![CDATA[Type]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_products.user">
+                <source><![CDATA[User]]></source>
+            </trans-unit>
+            <trans-unit id="tx_productadvertisement_domain_model_users">
+                <source><![CDATA[Users]]></source>
+            </trans-unit>
+            <trans-unit id="update_msg">
+                <source><![CDATA[updated the advetisement]]></source>
+            </trans-unit>
+            <trans-unit id="updated_by_admin">
+                <source><![CDATA[has been updated by admin]]></source>
+            </trans-unit>
+            <trans-unit id="user_product.activate_product">
+                <source><![CDATA[Show]]></source>
+            </trans-unit>
+            <trans-unit id="user_product.deactivate_product">
+                <source><![CDATA[Hide]]></source>
+            </trans-unit>
+            <trans-unit id="user_product.delete_product">
+                <source><![CDATA[Delete]]></source>
+            </trans-unit>
+            <trans-unit id="user_product.edit_product">
+                <source><![CDATA[Edit]]></source>
+            </trans-unit>
+            <trans-unit id="user_product.go_back">
+                <source><![CDATA[Product List]]></source>
+            </trans-unit>
+            <trans-unit id="user_product.new_product">
+                <source><![CDATA[Create New Product]]></source>
+            </trans-unit>
+            <trans-unit id="user_product.search">
+                <source><![CDATA[Search]]></source>
+            </trans-unit>
+            <trans-unit id="user_product.time_period">
+                <source><![CDATA[Time Period]]></source>
+            </trans-unit>
+            <trans-unit id="user_product.to">
+                <source><![CDATA[to]]></source>
+            </trans-unit>
+            <trans-unit id="user_product.user_action">
+                <source><![CDATA[Action]]></source>
+            </trans-unit>
+            <trans-unit id="user_product_list">
+                <source><![CDATA[My Products]]></source>
+            </trans-unit>
+            <!-- Attrubute -->
+            <trans-unit id="tx_productadvertisement_domain_model_attribute">
+                <source>Attribute</source>
+            </trans-unit>
+            <trans-unit id="attribute.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="attribute.caption">
+                <source>Caption</source>
+            </trans-unit>
+            <trans-unit id="attribute.type">
+                <source>Attribute Type</source>
+            </trans-unit>
+            <trans-unit id="attribute.render.type.0">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="attribute.render.type.1">
+                <source>Integer</source>
+            </trans-unit>
+            <trans-unit id="attribute.render.type.2">
+                <source>DateTime</source>
+            </trans-unit>
+            <trans-unit id="attribute.render.type.3">
+                <source>Boolean</source>
+            </trans-unit>
+            <trans-unit id="attribute.dateFormat">
+                <source>DateTime format</source>
+            </trans-unit>
+            <trans-unit id="attribute.unit">
+                <source>Unit</source>
+            </trans-unit>
+            <trans-unit id="attribute.filterType">
+                <source>Filter type</source>
+            </trans-unit>
+            <trans-unit id="attribute.filterType.I.0">
+                <source>Range</source>
+            </trans-unit>
+            <trans-unit id="attribute.filterType.I.1">
+                <source>Boolean</source>
+            </trans-unit>
+            <trans-unit id="attribute.filterType.I.2">
+                <source>Input</source>
+            </trans-unit>
+            <!-- attributeValue -->
+            <trans-unit id="tx_productadvertisement_domain_model_attributevalue">
+                <source>Attribute value</source>
+            </trans-unit>
+            <trans-unit id="attributeValue.value">
+                <source>Value</source>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>

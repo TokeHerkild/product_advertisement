@@ -33,6 +33,16 @@ class Attribute extends AbstractDomainObject implements AttributeInterface
     protected $dateFormat;
 
     /**
+     * @var string
+     */
+    protected $unit;
+
+    /**
+     * @var int
+     */
+    protected $filterType;
+
+    /**
      * @return string
      */
     public function getName()
@@ -110,6 +120,38 @@ class Attribute extends AbstractDomainObject implements AttributeInterface
     public function setDateFormat(string $dateFormat)
     {
         $this->dateFormat = $dateFormat;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUnit()
+    {
+        return $this->unit;
+    }
+
+    /**
+     * @param string $unit
+     */
+    public function setUnit($unit)
+    {
+        $this->unit = $unit;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFilterType()
+    {
+        return $this->filterType;
+    }
+
+    /**
+     * @param int $filterType
+     */
+    public function setFilterType($filterType)
+    {
+        $this->filterType = $filterType;
     }
 
 }

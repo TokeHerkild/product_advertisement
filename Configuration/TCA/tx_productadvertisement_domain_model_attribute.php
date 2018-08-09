@@ -87,10 +87,33 @@ return [
                 ],
             ],
         ],
+        'unit' => [
+            'exclude' => 1,
+            'label' => $lllPath . 'attribute.unit',
+            'config' => [
+                'type' => 'input',
+                'max' => 24,
+                'size' => 12,
+                'eval' => 'trim',
+            ],
+        ],
+        'filter_type' => [
+            'exclude' => 1,
+            'label' => $lllPath . 'attribute.filterType',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [$lllPath . 'attribute.filterType.I.0', \Drcsystems\ProductAdvertisement\Domain\Model\AttributeInterface::FILTER_TYPE_RANGE],
+                    [$lllPath . 'attribute.filterType.I.1', \Drcsystems\ProductAdvertisement\Domain\Model\AttributeInterface::FILTER_TYPE_BOOL],
+                    [$lllPath . 'attribute.filterType.I.2', \Drcsystems\ProductAdvertisement\Domain\Model\AttributeInterface::FILTER_TYPE_INPUT],
+                ],
+            ],
+        ],
     ],
     'types' => [
         0 => [
-            'showitem' => 'name,caption,attribute_type,date_format,category'
+            'showitem' => 'name,caption,attribute_type,date_format,unit,filter_type,category'
         ]
     ],
     'palettes' => [],

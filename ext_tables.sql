@@ -104,7 +104,7 @@ CREATE TABLE tx_productadvertisement_domain_model_products (
 #
 CREATE TABLE fe_users (
 
-	tx_extbase_type varchar(255) DEFAULT '' NOT NULL,
+	tx_extbase_type varchar(255) NOT NULL DEFAULT '0',
 
 );
 
@@ -112,10 +112,10 @@ CREATE TABLE fe_users (
 # Table structure for table 'tx_productadvertisement_products_category_mm'
 #
 CREATE TABLE tx_productadvertisement_products_category_mm (
-	uid_local int(11) unsigned DEFAULT '0' NOT NULL,
-	uid_foreign int(11) unsigned DEFAULT '0' NOT NULL,
-	sorting int(11) unsigned DEFAULT '0' NOT NULL,
-	sorting_foreign int(11) unsigned DEFAULT '0' NOT NULL,
+	uid_local int(11) unsigned NOT NULL DEFAULT '0',
+	uid_foreign int(11) unsigned NOT NULL DEFAULT '0',
+	sorting int(11) unsigned NOT NULL DEFAULT '0',
+	sorting_foreign int(11) unsigned NOT NULL DEFAULT '0',
 
 	KEY uid_local (uid_local),
 	KEY uid_foreign (uid_foreign)
@@ -125,11 +125,13 @@ CREATE TABLE tx_productadvertisement_domain_model_attribute (
   uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
-	name varchar(32) DEFAULT '' NOT NULL,
-	caption varchar (32) DEFAULT '' NOT NULL,
+	name varchar(32) NOT NULL DEFAULT '',
+	caption varchar(32) NOT NULL DEFAULT '',
 	category int(11) unsigned DEFAULT '0' NOT NULL,
-	attribute_type smallint (4) DEFAULT '0' NOT NULL,
-	date_format varchar (20) DEFAULT 'd-m-Y' NOT NULL,
+	attribute_type smallint(4) DEFAULT '0' NOT NULL,
+	date_format varchar(20) DEFAULT 'd-m-Y' NOT NULL,
+	unit varchar(24) DEFAULT '' NOT NULL,
+	filter_type smallint(4) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -164,7 +166,7 @@ CREATE TABLE tx_productadvertisement_domain_model_attributevalue (
 	pid int(11) DEFAULT '0' NOT NULL,
 
 	attribute int(11) unsigned DEFAULT '0' NOT NULL,
-  value varchar (64) DEFAULT '' NOT NULL,
+  value varchar(64) DEFAULT '' NOT NULL,
   product int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
