@@ -650,4 +650,23 @@ class Products extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->attributes->attach($attributeValue);
     }
 
+    /**
+     * @param string $name
+     * @return \Drcsystems\ProductAdvertisement\Domain\Model\AttributeValue|null
+     */
+    public function getAttributeByName($name)
+    {
+        $attributes = $this->getAttributes();
+        $attributes->rewind();
+        while ($attributes->valid()) {
+            /** @var \Drcsystems\ProductAdvertisement\Domain\Model\AttributeValue $attribute */
+            $attribute = $attributes->current();
+            if ($attribute->getAttribute()->getName() === $name) {
+                return $attribute;
+            }
+            $attributes->next();
+        }
+        return null;
+    }
+
 }
