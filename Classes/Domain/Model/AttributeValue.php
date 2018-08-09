@@ -87,4 +87,28 @@ class AttributeValue extends AbstractDomainObject implements AttributeInterface
         $this->value = $value;
     }
 
+    /**
+     * @return string
+     */
+    public function getCaption()
+    {
+        return $this->attribute->getCaption();
+    }
+
+    /**
+     * @return string
+     */
+    public function getUnit()
+    {
+        return $this->attribute->getUnit();
+    }
+
+    /**
+     * @return string
+     */
+    public function getDateFormat()
+    {
+        return $this->getAttribute()->getDateFormat();
+    }
+
 }
