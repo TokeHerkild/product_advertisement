@@ -61,6 +61,7 @@ return [
                     [$lllPath . 'attribute.render.type.0', \Drcsystems\ProductAdvertisement\Domain\Model\AttributeInterface::ATTRIBUTE_TYPE_TEXT],
                     [$lllPath . 'attribute.render.type.1', \Drcsystems\ProductAdvertisement\Domain\Model\AttributeInterface::ATTRIBUTE_TYPE_INT],
                     [$lllPath . 'attribute.render.type.2', \Drcsystems\ProductAdvertisement\Domain\Model\AttributeInterface::ATTRIBUTE_TYPE_DATE],
+                    [$lllPath . 'attribute.render.type.3', \Drcsystems\ProductAdvertisement\Domain\Model\AttributeInterface::ATTRIBUTE_TYPE_BOOL],
                 ],
             ],
         ],

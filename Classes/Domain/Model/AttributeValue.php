@@ -56,7 +56,7 @@ class AttributeValue extends AbstractDomainObject implements AttributeInterface
     }
 
     /**
-     * @return string
+     * @return bool|\DateTime|int|string
      */
     public function getValue()
     {
@@ -69,6 +69,9 @@ class AttributeValue extends AbstractDomainObject implements AttributeInterface
             case self::ATTRIBUTE_TYPE_DATE:
                 $result = \DateTime::createFromFormat($this->getAttribute()->getDateFormat(), $this->value);
                 return $result;
+
+            case self::ATTRIBUTE_TYPE_BOOL:
+                return (bool) $this->value;
 
             default:
                 return $this->value;

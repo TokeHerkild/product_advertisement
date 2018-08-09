@@ -330,6 +330,8 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * Set TypeConverter option for image upload while update
      *
      * @return void
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\InvalidArgumentNameException
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchArgumentException
      */
     public function initializeUpdateAction()
     {
@@ -347,6 +349,13 @@ class ProductsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
                     \TYPO3\CMS\Extbase\Property\TypeConverter\DateTimeConverter::CONFIGURATION_DATE_FORMAT, 'Y-m-d');
         }
         $this->setTypeConverterConfigurationForImageUpload('products');
+        $products = $this->request->getArgument('products');
+        foreach ($products['attributes'] as $key => $attribute) {
+            if (empty($attribute['attribute']['__identity'])) {
+                unset($products['attributes'][$key]);
+            }
+        }
+        $this->request->setArgument('products', $products);
     }
 
     /**

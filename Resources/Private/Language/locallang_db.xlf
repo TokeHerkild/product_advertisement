@@ -351,6 +351,9 @@
 			<trans-unit id="attribute.render.type.2">
 				<source>DateTime</source>
 			</trans-unit>
+			<trans-unit id="attribute.render.type.3">
+				<source>Boolean</source>
+			</trans-unit>
 			<trans-unit id="attribute.dateFormat">
 				<source>DateTime format</source>
 			</trans-unit>

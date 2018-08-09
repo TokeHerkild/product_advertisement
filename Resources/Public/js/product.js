@@ -50,6 +50,13 @@ $(document).ready(function(){
     		$('#inquiry').submit();
     	}
     });
+
+    $('#categorySelect').off('change').on('change', function () {
+    	var id = $('#categorySelect option:selected').val();
+    	$('.form-group .attributes').hide();
+    	$('#cat_' + id).show();
+	});
+
 });
 
 function validateFields(){
